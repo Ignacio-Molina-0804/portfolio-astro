@@ -1,9 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Badge from '../components/Badge.astro';
+import LinkedInIcon from "../components/icons/LinkedIn.astro"
+import GithubIcon from "../components/icons/GitHub.astro"
+import GmailIcon from "../components/icons/Gmail.astro"
+import SocialPill from '../components/SocialPill.astro';
+
+
+const title = "Portfolio de Ignacio Molina - Desarrollador y Programador Web y Back-End"
+const description = "Desarrollador Web (Astro/HTML/CSS/TailWind/JavaScript/TypeScript) y Back-End en Java Spring Boot | Conocimientos en JPA, APIs REST y MySQL | Autodidacta con proyectos prácticos | Portfolio técnico";
+
 ---
 
-<Layout title = "Portfolio">
+<Layout title = "Portfolio de Ignacio Molina - Desarrollador y Programador Web y Back-End", description=''>
 
   <section class="w-full mx-auto lg:w-[740px] py-44">
 
@@ -18,9 +27,34 @@ import Badge from '../components/Badge.astro';
           <Badge>Disponible para Trabajar</Badge>
       </a> 
     </h1>
-    <h2 class="text-2xl opacity-75">
-      Desarrollador Web y Back-End 🔧 | Autodidacta con proyectos 100% prácticos | De Mendoza, Argentina 🇦🇷
+
+    <h2 class="text-2xl text-wrap py-3">
+      <span class="font-medium text-amber-300/95 drop-shadow-sm">Desarrollador Web y Back-End</span>
+      <span class="mx-2 text-gray-400 opacity-50">|</span>
+      <span class="text-gray-200/85">Autodidacta con proyectos 100% prácticos</span>
+      <span class="mx-2 text-gray-400 opacity-50">|</span>
+      <span class="text-emerald-300/90">De Mendoza, Argentina <span class="text-xl">🇦🇷</span></span>
     </h2>
+
+    <ul class="py-2">
+
+      <li>
+
+        <SocialPill href="https://www.linkedin.com/in/ignacio-ezequiel-molina-granda-2a2aa6272/">
+          <LinkedInIcon/>LinkedIn
+        </SocialPill>
+
+        <SocialPill href="https://github.com/Ignacio-Molina-0804">
+          <GithubIcon/>Github
+        </SocialPill>
+        
+        <SocialPill href="https://mail.google.com/mail/?view=cm&fs=1&to=molinagranda@gmail.com">
+          <GmailIcon/> molinagranda@gmail.com
+        </SocialPill>
+
+      </li>
+
+    </ul>
 
   </section>
  
