@@ -8,6 +8,8 @@ import SocialPill from "../components/SocialPill.astro";
 import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import BriefCase from "../components/icons/BriefCase.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import Projects from "../components/Projects.astro"
 
 const title =
   "Portfolio de Ignacio Molina - Desarrollador y Programador Web y Back-End";
@@ -16,7 +18,7 @@ const description =
 ---
 
 <Layout title={title} , description={description}>
-  <main>
+  <main class="px-6">
     <SectionContainer  class="py-32 pb-36 flex flex-row items-center">
       <img
         class="rounded-full w-52 h-52 mx-10"
@@ -24,7 +26,7 @@ const description =
         alt="Foto de Perfil"
       />
       <div>
-        <h1 class="text-white text-5xl font-bold flex flex-row gap-x-3 pb-10">
+        <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-3 pb-6 lg:pb-10 text-pretty">
           Hola, Soy Ignacio Molina
           <a
             href="https://www.linkedin.com/in/ignacio-ezequiel-molina-granda-2a2aa6272/"
@@ -32,10 +34,10 @@ const description =
             rel="noopener"
             class="flex justify-center items-center"
           >
-            <Badge>Disponible para Trabajar</Badge>
+            <Badge class="hover:text-blue-200">Disponible para Trabajar</Badge>
           </a>
         </h1>
-        <h2 class="text-2xl text-wrap py-3">
+        <h2 class="text-xl lg:text-2xl py-3 md:max-w-[600px] text-pretty">
           <span class="font-medium text-amber-300/95 drop-shadow-sm"
             >Desarrollador Web y Back-End</span
           >
@@ -46,25 +48,27 @@ const description =
           <span class="mx-2 text-gray-400 opacity-50">|</span>
           <span class="text-blue-200/85">De Mendoza, Argentina</span>
         </h2>
-        <ul class="py-2">
-          <li>
-            <SocialPill
-              href="https://www.linkedin.com/in/ignacio-ezequiel-molina-granda-2a2aa6272/"
-            >
-              <LinkedInIcon class="pr-2" />LinkedIn
-            </SocialPill>
+        <nav class="flex flex-wrap gap-8 mt-8">
+          <ul>
+            <li>
+              <SocialPill
+                href="https://www.linkedin.com/in/ignacio-ezequiel-molina-granda-2a2aa6272/"
+              >
+                <LinkedInIcon class="size-4 lg:size-6 mr-1"/>LinkedIn
+              </SocialPill>
 
-            <SocialPill href="https://github.com/Ignacio-Molina-0804">
-              <GithubIcon class="pr-2" />Github
-            </SocialPill>
+              <SocialPill href="https://github.com/Ignacio-Molina-0804">
+                <GithubIcon class="size-4 lg:size-6 mr-1"/>Github
+              </SocialPill>
 
-            <SocialPill
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=molinagranda@gmail.com"
-            >
-              <GmailIcon class="pr-2" /> molinagranda@gmail.com
-            </SocialPill>
-          </li>
-        </ul>
+              <SocialPill
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=molinagranda@gmail.com"
+              >
+                <GmailIcon class="size-4 lg:size-6 mr-1" /> molinagranda@gmail.com
+              </SocialPill>
+            </li>
+          </ul>
+        </nav>
       </div>
     </SectionContainer>
 
@@ -73,6 +77,14 @@ const description =
         <BriefCase class="size-7" /> Experiencia Laboral
       </h2>
       <Experience />
+
     </SectionContainer>
+        <SectionContainer id="proyectos">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <CodeIcon class="size-7" /> Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+
   </main>
 </Layout>

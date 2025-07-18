@@ -1,0 +1,38 @@
+---
+
+const PROJECTS = [
+
+    {
+
+        title: 'Project 1',
+        description: 'PapuProject',
+        link: "#",
+        github: "#",
+        image: "https://img.a.transfermarkt.technology/portrait/header/28003-1740766555.jpg?lm=1",
+        tags: ['HTML', 'CSS', 'JavaScript']
+
+    }
+
+]
+
+---
+
+{
+    PROJECTS.map(({title, description, tags, image})=>(
+
+        <article>
+            <h3>{title}</h3>
+            <p>{description}</p>
+            <ul>
+
+                {tags.map(tag=>(
+                    <li>{tag}</li>
+                ))}
+
+            </ul>
+            <img src={image} alt={`Captura de pantalla del proyecto ${image}`}>
+        </article>
+
+    ))
+
+}
