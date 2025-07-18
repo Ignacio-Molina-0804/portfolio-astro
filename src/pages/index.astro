@@ -1,4 +1,5 @@
 ---
+import Line from "../components/Line.astro";
 import Layout from "../layouts/Layout.astro";
 import Badge from "../components/Badge.astro";
 import LinkedInIcon from "../components/icons/LinkedIn.astro";
@@ -9,7 +10,8 @@ import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import BriefCase from "../components/icons/BriefCase.astro";
 import CodeIcon from "../components/icons/Code.astro";
-import Projects from "../components/Projects.astro"
+import Projects from "../components/Projects.astro";
+
 
 const title =
   "Portfolio de Ignacio Molina - Desarrollador y Programador Web y Back-End";
@@ -28,14 +30,6 @@ const description =
       <div>
         <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-3 pb-6 lg:pb-10 text-pretty">
           Hola, Soy Ignacio Molina
-          <a
-            href="https://www.linkedin.com/in/ignacio-ezequiel-molina-granda-2a2aa6272/"
-            target="_blank"
-            rel="noopener"
-            class="flex justify-center items-center"
-          >
-            <Badge class="hover:text-blue-200">Disponible para Trabajar</Badge>
-          </a>
         </h1>
         <h2 class="text-xl lg:text-2xl py-3 md:max-w-[600px] text-pretty">
           <span class="font-medium text-amber-300/95 drop-shadow-sm"
@@ -51,17 +45,17 @@ const description =
         <nav class="flex flex-wrap gap-8 mt-8">
           <ul>
             <li>
-              <SocialPill
+              <SocialPill class="hover:bg-blue-800"
                 href="https://www.linkedin.com/in/ignacio-ezequiel-molina-granda-2a2aa6272/"
               >
                 <LinkedInIcon class="size-4 lg:size-6 mr-1"/>LinkedIn
               </SocialPill>
 
-              <SocialPill href="https://github.com/Ignacio-Molina-0804">
+              <SocialPill class="hover:bg-black" href="https://github.com/Ignacio-Molina-0804">
                 <GithubIcon class="size-4 lg:size-6 mr-1"/>Github
               </SocialPill>
 
-              <SocialPill
+              <SocialPill class="hover:bg-red-800" 
                 href="https://mail.google.com/mail/?view=cm&fs=1&to=molinagranda@gmail.com"
               >
                 <GmailIcon class="size-4 lg:size-6 mr-1" /> molinagranda@gmail.com
@@ -77,6 +71,8 @@ const description =
         <BriefCase class="size-7" /> Experiencia Laboral
       </h2>
       <Experience />
+
+    <Line/>
 
     </SectionContainer>
         <SectionContainer id="proyectos">

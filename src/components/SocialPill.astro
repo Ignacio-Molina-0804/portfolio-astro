@@ -1,8 +1,14 @@
+---
+
+  const {class: className, href} = Astro.props
+
+---
+
 <a
   target="_blank"
   rel="noopener noreferrer"
-  class={`Xbg-blue-100 hover:bg-blue-800 text-blue-800 text-xs font-semibold m-1 px-2 py-1 lg:px-4 lg:py-2 rounded-xl dark:bg-gray-700 dark:text-gray-200 border border-black-400 inline-flex items-center justify-center`}
-  {...Astro.props}
+  class={`Xbg-blue-100 ${className} text-blue-800 text-xs font-semibold m-1 px-2 py-1 lg:px-4 lg:py-2 rounded-xl dark:bg-gray-700 dark:text-gray-200 border border-black-400 inline-flex items-center justify-center`}
+  href={href}
 >
   <slot />
 </a>

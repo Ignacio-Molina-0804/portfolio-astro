@@ -1,14 +1,17 @@
 ---
 
+import Line from "./Line.astro"
+import SocialPill from "./SocialPill.astro"
+
 const PROJECTS = [
 
     {
 
-        title: 'Project 1',
-        description: 'PapuProject',
+        title: 'El Buen Sabor de Don pepe argento',
+        description: 'GlimmerVault es una aplicación interactiva que permite a los usuarios explorar y preservar recuerdos digitales en un entorno 3D estilizado como una bóveda mágica. Cada recuerdo se visualiza como un artefacto animado con metadatos interactivos, accesibles desde cualquier dispositivo.',
         link: "#",
         github: "#",
-        image: "https://img.a.transfermarkt.technology/portrait/header/28003-1740766555.jpg?lm=1",
+        image: "data/project1.png",
         tags: ['HTML', 'CSS', 'JavaScript']
 
     }
@@ -20,18 +23,26 @@ const PROJECTS = [
 {
     PROJECTS.map(({title, description, tags, image})=>(
 
-        <article>
-            <h3>{title}</h3>
-            <p>{description}</p>
-            <ul>
+        <article class="flex lg:justify-between">
+            <div>
+                <h3 class="text-xl font-semibold mb-3 pb-2">{title}</h3>
+                <p class="mb-4 opacity-80 text-pretty sm:w-[500px]">{description}</p>
+                 <ul class="flex flex-row py-3">
 
-                {tags.map(tag=>(
-                    <li>{tag}</li>
-                ))}
+                    {tags.map(tag=>(
 
-            </ul>
-            <img src={image} alt={`Captura de pantalla del proyecto ${image}`}>
+                        <SocialPill>
+                            <li>{tag}</li>
+                        </SocialPill>
+                    ))}
+
+                </ul>
+            </div>
+            <img class="w-[500px] rounded-lg" src={image} alt={`Captura de pantalla del proyecto ${image}`}>
+            
         </article>
+
+        <Line/>
 
     ))
 
