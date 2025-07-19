@@ -24,7 +24,7 @@ const description =
 
 <Layout title={title} , description={description}>
   <main class="px-6">
-    <SectionContainer class="py-32 pb-36 flex justify-center items-center">
+    <SectionContainer id="top" class="py-32 pb-36 flex justify-center items-center">
       <img
         class="rounded-full w-52 h-52 mx-10"
         src="data/img-perfil.png"
@@ -91,16 +91,16 @@ const description =
       <Projects>
           <div>
             <ul class="flex flex-row py-3 gap-2 sm:w-full flex-wrap">
-              <SocialPill>
+              <SocialPill class="hover:bg-orange-800" href="https://astro.build">
                 <AstroIcon/>
               </SocialPill>
-              <SocialPill>
+              <SocialPill class="hover:bg-yellow-600" href="https://www.javascript.com/">
                 <JavaScriptIcon />
               </SocialPill>
-              <SocialPill>
+              <SocialPill class="hover:bg-blue-800" href="https://www.typescriptlang.org/">
                 <TypeScriptIcon />
               </SocialPill>
-              <SocialPill>
+              <SocialPill class="hover:bg-blue-400" href="https://tailwindcss.com/">
                 <TailwindIcon />
               </SocialPill>
             </ul>
