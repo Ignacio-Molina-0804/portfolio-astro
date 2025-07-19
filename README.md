@@ -1,12 +1,18 @@
 # 🌟 Portfolio Personal
 
-Este es mi portfolio personal desarrollado con [Astro](https://astro.build/) y estilizado utilizando [Tailwind CSS](https://tailwindcss.com/) y estilos personalizados con CSS. El sitio muestra mis proyectos, experiencia y redes de contacto de forma clara, responsiva y profesional.
+Este es mi portfolio personal desarrollado con [Astro](https://astro.build/) y estilizado utilizando [Tailwind CSS](https://tailwindcss.com/) junto a estilos personalizados en CSS. El sitio muestra mis proyectos, experiencia y redes de contacto de forma clara, responsiva y profesional.
+
+---
 
 ## 🚀 Tecnologías utilizadas
 
 - **Astro**: Framework moderno para sitios estáticos y rápidos.
 - **Tailwind CSS**: Framework utilitario para estilos.
-- **CSS personalizado**: Complemento para ajustes finos en el diseño.
+- **CSS personalizado**: Ajustes finos en el diseño.
+- **TypeScript**: Tipado estático para mayor robustez.
+- **Componentes SVG**: Íconos personalizados como componentes Astro.
+
+---
 
 ## 📁 Estructura del proyecto
 
@@ -76,7 +82,9 @@ npm run preview   # Previsualizar la build de producción
 - Todas las imágenes se almacenan en `public/data`.
 - Los íconos sociales están implementados como componentes Astro reutilizables.
 - Tailwind permite un diseño responsive y flexible fácilmente.
+- El sitio está optimizado para accesibilidad y rendimiento.
 
 ---
 
-¡Gracias por visitar mi portfolio! ✨
+
+Última actualización: 19 de julio de 2025 
