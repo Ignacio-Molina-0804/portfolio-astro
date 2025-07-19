@@ -1,49 +1,38 @@
 ---
-
-import Line from "./Line.astro"
-import SocialPill from "./SocialPill.astro"
+import Button from "./Button.astro";
+import Line from "./Line.astro";
+import SocialPill from "./SocialPill.astro";
+import AstroIcon from "./icons/Astro.astro";
+import JavaScriptIcon from "./icons/JavaScript.astro";
+import TypeScriptIcon from "./icons/TypeScript.astro";
+import TailwindIcon from "./icons/TailwindCSS.astro";
 
 const PROJECTS = [
-
-    {
-
-        title: 'El Buen Sabor de Don pepe argento',
-        description: 'GlimmerVault es una aplicación interactiva que permite a los usuarios explorar y preservar recuerdos digitales en un entorno 3D estilizado como una bóveda mágica. Cada recuerdo se visualiza como un artefacto animado con metadatos interactivos, accesibles desde cualquier dispositivo.',
-        link: "#",
-        github: "#",
-        image: "data/project1.png",
-        tags: ['HTML', 'CSS', 'JavaScript']
-
-    }
-
-]
-
+  {
+    title: "Página Web de Montañismo",
+    description:
+      "Este repositorio contiene el código fuente de la aplicación. Si bien no corresponde exactamente con la versión actualmente desplegada en el sitio del cliente, se encuentra disponible con fines demostrativos. Su objetivo es mostrar la estructura, organización y lógica utilizada durante el desarrollo del proyecto, sirviendo como referencia o ejemplo del proceso de trabajo aplicado.",
+    image: "data/project1.png",
+  },
+];
 ---
 
 {
-    PROJECTS.map(({title, description, tags, image})=>(
-
-        <article class="flex lg:justify-between">
-            <div>
-                <h3 class="text-xl font-semibold mb-3 pb-2">{title}</h3>
-                <p class="mb-4 opacity-80 text-pretty sm:w-[500px]">{description}</p>
-                 <ul class="flex flex-row py-3">
-
-                    {tags.map(tag=>(
-
-                        <SocialPill>
-                            <li>{tag}</li>
-                        </SocialPill>
-                    ))}
-
-                </ul>
-            </div>
-            <img class="w-[500px] rounded-lg" src={image} alt={`Captura de pantalla del proyecto ${image}`}>
-            
-        </article>
-
-        <Line/>
-
-    ))
-
+  PROJECTS.map(({ title, description, image}) => (
+    <article class="flex flex-col gap-8 w-full">
+      {/* Texto y tags */}
+      <div class="flex-1 sm:w-full justify-center">
+        <h3 class="text-xl font-semibold mb-3 pb-2 ">{title}</h3>
+        <p class="text-sm mb-2 opacity-80 w-full text-pretty">{description}</p>
+        <div class="flex flex-row justify-between">
+            <slot/>
+        </div>
+        <img
+          class="w-full rounded-lg shadow-xl shadow-gray-800 mt-4"
+          src={image}
+          alt={`Captura de ${title}`}
+        />
+      </div>
+    </article>
+  ))
 }
