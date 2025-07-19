@@ -1,38 +1,100 @@
 ---
-import Button from "./Button.astro";
 import Line from "./Line.astro";
 import SocialPill from "./SocialPill.astro";
+
 import AstroIcon from "./icons/Astro.astro";
 import JavaScriptIcon from "./icons/JavaScript.astro";
 import TypeScriptIcon from "./icons/TypeScript.astro";
 import TailwindIcon from "./icons/TailwindCSS.astro";
+import GithubIcon from "./icons/GitHub.astro";
+import EnterIcon from "./icons/Enter.astro";
+import ReactIcon from "./icons/React.astro";
+import ReduxIcon from "./icons/Redux.astro";
+import JavaIcon from "./icons/Java.astro";
+import SpringIcon from "./icons/SpringBoot.astro";
+import PostgresIcon from "./icons/Postgres.astro";
 
 const PROJECTS = [
   {
     title: "Página Web de Montañismo",
     description:
-      "Este repositorio contiene el código fuente de la aplicación. Si bien no corresponde exactamente con la versión actualmente desplegada en el sitio del cliente, se encuentra disponible con fines demostrativos. Su objetivo es mostrar la estructura, organización y lógica utilizada durante el desarrollo del proyecto, sirviendo como referencia o ejemplo del proceso de trabajo aplicado.",
-    image: "data/project1.png",
+      "Este repositorio contiene el código fuente de la aplicación. Si bien no corresponde exactamente con la versión actualmente desplegada en el sitio del cliente, se encuentra disponible con fines demostrativos. Su objetivo es mostrar la estructura, organización y lógica utilizada durante el desarrollo del proyecto.",
+    image: "data/ProjectAconcagua.webp",
+    techIcons: [
+      { icon: AstroIcon, href: "https://astro.build", class: "hover:bg-orange-800" },
+      { icon: JavaScriptIcon, href: "https://www.javascript.com/", class: "hover:bg-yellow-600" },
+      { icon: TypeScriptIcon, href: "https://www.typescriptlang.org/", class: "hover:bg-blue-800" },
+      { icon: TailwindIcon, href: "https://tailwindcss.com/", class: "hover:bg-blue-400" },
+    ],
+    repoIcons: [
+      { icon: GithubIcon, href: "https://github.com/Ignacio-Molina-0804/PaginaAconcagua", class: "hover:bg-blue-800" },
+      { icon: EnterIcon, href: "https://gastonmolinaguide.netlify.app", class: "hover:bg-blue-800" },
+    ]
   },
+
+  {
+    title: "El Buen Sabor Front-End",
+    description:
+      "Desarrollo Front End de una aplicación web para un restaurante. Este proyecto contempla un diseño moderno y responsivo que garantiza una experiencia de usuario óptima en distintos dispositivos. Incluye funcionalidades como un menú interactivo, un sistema de gestión de direcciones y una página de administración. La implementación se llevó a cabo utilizando tecnologías avanzadas como React, Redux Toolkit, TypeScript y Tailwind CSS, entre otras herramientas detalladas en el repositorio.",
+    image: "data/ProjectFrontEndBuenSabor.webp",
+    techIcons: [
+      { icon: ReactIcon, href: "https://react.dev", class: "hover:bg-sky-600" },
+      { icon: ReduxIcon, href: "https://redux-toolkit.js.org/", class: "hover:bg-purple-800" },
+      { icon: TypeScriptIcon, href: "https://www.typescriptlang.org/", class: "hover:bg-blue-800" },
+      { icon: TailwindIcon, href: "https://tailwindcss.com/", class: "hover:bg-blue-400" },
+    ],
+    repoIcons: [
+      { icon: GithubIcon, href: "https://github.com/Ignacio-Molina-0804/ElBuenSaborFrontReact", class: "hover:bg-blue-800" },
+    //   { icon: EnterIcon, href: "https://gastonmolinaguide.netlify.app", class: "hover:bg-blue-800" },
+    ]
+  },
+  {
+    title: "El Buen Sabor Back-End",
+    description:
+      "Desarrollo Back End de una aplicación web para un restaurante. Este componente del proyecto está orientado a garantizar la robustez, escalabilidad y seguridad del sistema, proporcionando una API eficiente y bien estructurada para soportar funcionalidades clave como la gestión del menú, el control de direcciones y la administración general. La implementación se realizó utilizando tecnologías de alto rendimiento y reconocimiento en la industria, tales como Java, Spring Boot, JPA y PostgreSQL, además de otras herramientas complementarias que se encuentran detalladas en el repositorio.",
+    image: "data/ProjectBackEndBuenSabor.webp",
+    techIcons: [
+       { icon: JavaIcon, href: "https://www.oracle.com/java/", class: "hover:bg-red-700" },
+       { icon: SpringIcon, href: "https://spring.io/projects/spring-boot", class: "hover:bg-green-700" },
+       { icon: PostgresIcon, href: "https://www.postgresql.org/", class: "hover:bg-blue-700" },
+    ],
+    repoIcons: [
+      { icon: GithubIcon, href: "https://github.com/Ignacio-Molina-0804/buensabor-backend", class: "hover:bg-blue-800" },
+    //   { icon: EnterIcon, href: "https://gastonmolinaguide.netlify.app", class: "hover:bg-blue-800" },
+    ]
+  }
 ];
 ---
 
-{
-  PROJECTS.map(({ title, description, image}) => (
-    <article class="flex flex-col gap-8 w-full">
-      {/* Texto y tags */}
-      <div class="flex-1 sm:w-full justify-center">
-        <h3 class="text-xl font-semibold mb-3 pb-2 ">{title}</h3>
-        <p class="text-sm mb-2 opacity-80 w-full text-pretty">{description}</p>
-        <div class="flex flex-row justify-between">
-            <slot/>
-        </div>
-        <img
-          class="w-full rounded-lg shadow-xl shadow-gray-800 mt-4"
-          src={image}
-          alt={`Captura de ${title}`}
-        />
+{PROJECTS.map(({ title, description, image, techIcons, repoIcons }) => (
+  <article class="flex flex-col gap-8 w-full">
+    <div class="flex-1 sm:w-full justify-center py-4">
+      <h3 class="text-xl font-semibold mb-3 pb-2">{title}</h3>
+      <p class="text-sm mb-2 opacity-80 w-full text-pretty">{description}</p>
+    
+    <div class="flex justify-between w-full">
+      <div class="flex flex-row py-3 gap-2 sm:w-full flex-wrap">
+        {techIcons.map(({ icon: Icon, href, class: customClass }) => (
+          <SocialPill class={customClass} href={href}>
+            <Icon />
+          </SocialPill>
+        ))}
       </div>
-    </article>
-  ))
-}
+      <div class="flex flex-row py-3 gap-2 ">
+        {repoIcons.map(({ icon: Icon, href, class: customClass }) => (
+          <SocialPill class={customClass} href={href}>
+            <Icon />
+          </SocialPill>
+        ))}
+      </div>
+    </div>
+
+      <img
+        class="w-full rounded-lg shadow-xl shadow-gray-800 mt-4"
+        src={image}
+        alt={`Captura de ${title}`}
+      />
+    </div>
+    <Line />
+  </article>
+))}
