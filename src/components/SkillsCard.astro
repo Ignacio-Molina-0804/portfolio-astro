@@ -64,20 +64,18 @@ const SKILLS = [
     techIcons: [
       {
         icon: JavaIcon,
-        href: "https://www.python.org/",
-        class: "hover:bg-yellow-500",
         name: "Java",
       },
       {
         icon: SpringIcon,
-        href: "https://www.oracle.com/java/",
-        class: "hover:bg-red-700",
         name: "Spring Boot",
       },
       {
         icon: PostgresIcon,
-        href: "https://www.postgresql.org/",
-        class: "hover:bg-blue-700",
+        name: "PostgreSQL",
+      },
+      {
+        icon: PostgresIcon,
         name: "PostgreSQL",
       },
     ],
@@ -85,26 +83,18 @@ const SKILLS = [
 ];
 ---
 
-<section class="grid gap-6 md:grid-cols-3 px-4 py-10 text-white">
+<section class="grid gap-6 md:grid-cols-3 px-4 py-5 text-white">
   {
     SKILLS.map(({ title, techIcons }) => (
       <div class="group rounded-xl border border-transparent bg-[#0f172a] p-6 shadow-md hover:shadow-blue-500/20 hover:border-blue-400 transition-all duration-300 transform hover:-translate-y-1">
         <h3 class="text-xl font-semibold mb-4 text-white">{title}</h3>
         <ul class="space-y-3">
-          {techIcons.map(({ icon: Icon, href, class: iconClass, name }) => (
+          {techIcons.map(({ icon: Icon, name }) => (
             <li
               class={`flex items-center justify-between bg-[#1e293b] px-4 py-2 rounded-lg transition-colors duration-200 group-hover:bg-[#334155]`}
             >
               <span>{name}</span>
               <Icon/>
-              <a
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                class={iconClass}
-              >
-                <icon class="h-5" />
-              </a>
             </li>
           ))}
         </ul>

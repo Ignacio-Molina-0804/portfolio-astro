@@ -10,13 +10,10 @@ import SectionContainer from "../components/SectionContainer.astro";
 import BriefCase from "../components/icons/BriefCase.astro";
 import CodeIcon from "../components/icons/Code.astro";
 import Projects from "../components/Projects.astro";
-import AstroIcon from "../components/icons/Astro.astro";
-import JavaScriptIcon from "../components/icons/JavaScript.astro";
-import TypeScriptIcon from "../components/icons/TypeScript.astro";
-import TailwindIcon from "../components/icons/TailwindCSS.astro";
-import EnterIcon from "../components/icons/Enter.astro";
 import PersonIcon from "../components/icons/Person.astro";
 import SkillsCard from "../components/SkillsCard.astro";
+import ComputerIcon from "../components/icons/Computer.astro";
+
 
 const title =
   "Portfolio de Ignacio Molina - Desarrollador y Programador Web y Back-End";
@@ -91,7 +88,7 @@ const description =
     </SectionContainer>
     <SectionContainer id="proyectos">
       <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
-        <CodeIcon class="size-7" /> Proyectos
+        <ComputerIcon class="size-7" /> Proyectos
       </h2>
       <Projects />
     </SectionContainer>
@@ -100,8 +97,40 @@ const description =
       <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
         <PersonIcon class="size-7" /> Sobre Mi
       </h2>
-      <SkillsCard />
+      <p class="text-gray-300 mb-4">
+        <span class="text-blue-400 font-semibold"
+          >Soy un desarrollador web y back-end autodidacta</span
+        > de Mendoza, Argentina. Me apasiona aprender y crear proyectos prácticos
+        que resuelvan problemas reales.
+        <span class="text-green-400"
+          >En mi tiempo libre, disfruto programar por hobby y explorar nuevas
+          tecnologías para ampliar mis conocimientos.</span
+        >
+        Actualmente, estoy finalizando la <span
+          class="text-yellow-300 font-medium"
+          >Tecnicatura Universitaria en Programación</span
+        > en la UTN (Universidad Tecnológica Nacional).
+        <span class="text-purple-400"
+          >Estoy abierto tanto a incorporarme a una empresa como a trabajar de
+          forma freelance</span
+        >, siempre en busca de nuevos desafíos que me permitan seguir creciendo
+        profesionalmente.
+      </p>
+      <p class="text-gray-300 mb-8">
+        Me considero una persona <span class="text-blue-400 font-semibold"
+          >responsable, comprometida y con ganas de aprender</span
+        >. Me gusta trabajar en equipo y aportar mis conocimientos para lograr
+        los objetivos comunes. Estoy siempre dispuesto a enfrentar nuevos retos
+        y aprender de ellos.
+      </p>
 
+      <Line/>
+    </SectionContainer>
+    <SectionContainer id="conocimientos">
+      <h2 class="text-2xl font-semibold mb-2 flex gap-x-3 items-center">
+        <CodeIcon class="size-7" /> Mis conocimientos
+      </h2>
+      <SkillsCard />
     </SectionContainer>
   </main>
 </Layout>
