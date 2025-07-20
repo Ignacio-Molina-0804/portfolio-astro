@@ -15,7 +15,6 @@ import SkillsCard from "../components/SkillsCard.astro";
 import ComputerIcon from "../components/icons/Computer.astro";
 import Separator from "../components/Separator.astro";
 
-
 const title =
   "Portfolio de Ignacio Molina - Desarrollador y Programador Web y Back-End";
 const description =
@@ -24,10 +23,7 @@ const description =
 
 <Layout title={title} , description={description}>
   <main class="px-6">
-    <SectionContainer
-      id="top"
-      class="py-32 pb-36 flex justify-center items-center"
-    >
+    <SectionContainer id="top" class="py-32 pb-36 flex justify-center items-center">
       <img
         class="rounded-full w-52 h-52 mx-10"
         src="data/img-perfil.webp"
@@ -84,16 +80,15 @@ const description =
         <BriefCase class="size-7" /> Experiencia Laboral
       </h2>
       <Experience />
-
-      <Line />
+      <Separator />
     </SectionContainer>
+
     <SectionContainer id="proyectos">
       <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
         <ComputerIcon class="size-7" /> Proyectos
       </h2>
       <Projects />
-
-      
+      <Separator />
     </SectionContainer>
 
     <SectionContainer id="sobre-mi">
@@ -126,10 +121,9 @@ const description =
         los objetivos comunes. Estoy siempre dispuesto a enfrentar nuevos retos
         y aprender de ellos.
       </p>
-
-      <Line/>
-      
+      <Separator />
     </SectionContainer>
+
     <SectionContainer id="conocimientos">
       <h2 class="text-2xl font-semibold mb-2 flex gap-x-3 items-center">
         <CodeIcon class="size-7" /> Mis conocimientos

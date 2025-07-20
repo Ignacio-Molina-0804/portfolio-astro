@@ -11,6 +11,19 @@ import JavaIcon from "./icons/Java.astro";
 import SpringIcon from "./icons/SpringBoot.astro";
 import PostgresIcon from "./icons/Postgres.astro";
 import Postgres from "./icons/Postgres.astro";
+import HTMLIcon from "./icons/HTML.astro";
+import CSSIcon from "./icons/CSS.astro";
+import VSCodeIcon from "./icons/VisualStudioCode.astro";
+import BrunoIcon from "./icons/Bruno.astro";
+import GitIcon from "./icons/Git.astro";
+import TrelloIcon from "./icons/Trello.astro";
+import JiraIcon from "./icons/Jira.astro";
+import FigmaIcon from "./icons/Figma.astro";
+import MySQLIcon from "./icons/MySQL.astro";
+import JPAIcon from "./icons/JPA.astro";
+
+
+
 
 const SKILLS = [
   {
@@ -18,21 +31,23 @@ const SKILLS = [
     techIcons: [
       {
         icon: JavaIcon,
-        href: "https://www.python.org/",
-        class: "hover:bg-yellow-500",
         name: "Java",
       },
       {
         icon: SpringIcon,
-        href: "https://www.oracle.com/java/",
-        class: "hover:bg-red-700",
         name: "Spring Boot",
       },
       {
         icon: PostgresIcon,
-        href: "https://www.postgresql.org/",
-        class: "hover:bg-blue-700",
         name: "PostgreSQL",
+      },
+      {
+        icon: MySQLIcon,
+        name: "MySQL",
+      },
+      {
+        icon: JPAIcon,
+        name: "JPA",
       },
     ],
   },
@@ -40,22 +55,28 @@ const SKILLS = [
     title: "Frontend Development",
     techIcons: [
       {
-        icon: JavaIcon,
-        href: "https://www.python.org/",
-        class: "hover:bg-yellow-500",
-        name: "Java",
+        icon: AstroIcon,
+        name: "Astro",
       },
       {
-        icon: SpringIcon,
-        href: "https://www.oracle.com/java/",
-        class: "hover:bg-red-700",
-        name: "Spring Boot",
+        icon: HTMLIcon,
+        name: "HTML",
       },
       {
-        icon: PostgresIcon,
-        href: "https://www.postgresql.org/",
-        class: "hover:bg-blue-700",
-        name: "PostgreSQL",
+        icon: CSSIcon,
+        name: "CSS",
+      },
+      {
+        icon: JavaScriptIcon,
+        name: "JavaScript",
+      },
+      {
+        icon: TypeScriptIcon,
+        name: "TypeScript",
+      },
+      {
+        icon: TailwindIcon,
+        name: "Tailwind CSS",
       },
     ],
   },
@@ -63,20 +84,28 @@ const SKILLS = [
     title: "Herramientas",
     techIcons: [
       {
-        icon: JavaIcon,
-        name: "Java",
+        icon: VSCodeIcon,
+        name: "Visual Studio Code",
       },
       {
-        icon: SpringIcon,
-        name: "Spring Boot",
+        icon: BrunoIcon,
+        name: "Bruno",
       },
       {
-        icon: PostgresIcon,
-        name: "PostgreSQL",
+        icon: GitIcon,
+        name: "Git",
       },
       {
-        icon: PostgresIcon,
-        name: "PostgreSQL",
+        icon: TrelloIcon,
+        name: "Trello",
+      },
+      {
+        icon: JiraIcon,
+        name: "Jira",
+      },
+      {
+        icon: FigmaIcon,
+        name: "Figma",
       },
     ],
   },
@@ -94,7 +123,7 @@ const SKILLS = [
               class={`flex items-center justify-between bg-[#1e293b] px-4 py-2 rounded-lg transition-colors duration-200 group-hover:bg-[#334155]`}
             >
               <span>{name}</span>
-              <Icon/>
+              <Icon />
             </li>
           ))}
         </ul>

@@ -29,7 +29,8 @@ const PROJECTS = [
     repoIcons: [
       { icon: GithubIcon, href: "https://github.com/Ignacio-Molina-0804/PaginaAconcagua", class: "hover:bg-blue-800" },
       { icon: EnterIcon, href: "https://gastonmolinaguide.netlify.app", class: "hover:bg-blue-800" },
-    ]
+    ],
+    showLine: true  
   },
 
   {
@@ -46,7 +47,8 @@ const PROJECTS = [
     repoIcons: [
       { icon: GithubIcon, href: "https://github.com/Ignacio-Molina-0804/ElBuenSaborFrontReact", class: "hover:bg-blue-800" },
     //   { icon: EnterIcon, href: "https://gastonmolinaguide.netlify.app", class: "hover:bg-blue-800" },
-    ]
+    ],
+    showLine: true  
   },
   {
     title: "El Buen Sabor Back-End",
@@ -54,19 +56,21 @@ const PROJECTS = [
       "Desarrollo Back End de una aplicación web para un restaurante. Este componente del proyecto está orientado a garantizar la robustez, escalabilidad y seguridad del sistema, proporcionando una API eficiente y bien estructurada para soportar funcionalidades clave como la gestión del menú, el control de direcciones y la administración general. La implementación se realizó utilizando tecnologías de alto rendimiento y reconocimiento en la industria, tales como Java, Spring Boot, JPA y PostgreSQL, además de otras herramientas complementarias que se encuentran detalladas en el repositorio.",
     image: "data/ProjectBackEndBuenSabor.webp",
     techIcons: [
-       { icon: JavaIcon, href: "https://www.oracle.com/java/", class: "hover:bg-red-700" },
-       { icon: SpringIcon, href: "https://spring.io/projects/spring-boot", class: "hover:bg-green-700" },
+       { icon: JavaIcon, href: "https://www.oracle.com/java/", class: "hover:bg-red-700", line: Line },
+       { icon: SpringIcon, href: "https://spring.io/projects/spring-boot", class: "hover:bg-green-700", line: Line },
        { icon: PostgresIcon, href: "https://www.postgresql.org/", class: "hover:bg-blue-700" },
     ],
     repoIcons: [
       { icon: GithubIcon, href: "https://github.com/Ignacio-Molina-0804/buensabor-backend", class: "hover:bg-blue-800" },
     //   { icon: EnterIcon, href: "https://gastonmolinaguide.netlify.app", class: "hover:bg-blue-800" },
-    ]
+    ],
+    showLine: false
+
   }
 ];
 ---
 
-{PROJECTS.map(({ title, description, image, techIcons, repoIcons }) => (
+{PROJECTS.map(({ title, description, image, techIcons, repoIcons, showLine }) => (
   <article class="flex flex-col gap-8 w-full">
     <div class="flex-1 sm:w-full justify-center py-4">
       <h3 class="text-xl font-semibold mb-3 pb-2">{title}</h3>
@@ -94,7 +98,8 @@ const PROJECTS = [
         src={image}
         alt={`Captura de ${title}`}
       />
+
+      {showLine && <Line />}  
     </div>
-    <Line />
   </article>
 ))}
