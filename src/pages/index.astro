@@ -15,6 +15,7 @@ import SkillsCard from "../components/SkillsCard.astro";
 import ComputerIcon from "../components/icons/Computer.astro";
 import Separator from "../components/Separator.astro";
 import Footer from "../components/Footer.astro";
+import EnvelopeIcon from "../components/icons/Envelope.astro";
 
 const title =
   "Portfolio de Ignacio Molina - Desarrollador y Programador Web y Back-End";
@@ -41,20 +42,16 @@ const description =
         </h1>
         <h2 class="text-xl lg:text-2xl py-3 md:max-w-[600px] text-pretty">
           <span
-            class="font-medium  text-amber-700/90 dark:text-amber-300/90 drop-shadow-sm"
+            class="font-medium text-amber-700/90 dark:text-amber-300/90 drop-shadow-sm"
           >
             Desarrollador Web y Back-End
           </span>
           <span class="mx-2 text-gray-400/60">|</span>
-          <span
-            class="text-gray-700/85 dark:text-gray-300/85"
-          >
+          <span class="text-gray-700/85 dark:text-gray-300/85">
             Autodidacta con proyectos 100% prácticos
           </span>
           <span class="mx-2 text-gray-400/60">|</span>
-          <span
-            class="text-blue-600/85 dark:text-blue-300/85"
-          >
+          <span class="text-blue-600/85 dark:text-blue-300/85">
             De Mendoza, Argentina
           </span>
         </h2>
@@ -88,7 +85,9 @@ const description =
     </SectionContainer>
 
     <SectionContainer id="experiencia">
-      <h2 class="text-gray-800 dark:text-white text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+      <h2
+        class="text-gray-800 dark:text-white text-2xl font-semibold mb-6 flex gap-x-3 items-center"
+      >
         <BriefCase class="text-gray-800 dark:text-white size-7" /> Experiencia Laboral
       </h2>
       <Experience />
@@ -96,7 +95,9 @@ const description =
     </SectionContainer>
 
     <SectionContainer id="proyectos">
-      <h2 class="text-gray-800 dark:text-white text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+      <h2
+        class="text-gray-800 dark:text-white text-2xl font-semibold mb-6 flex gap-x-3 items-center"
+      >
         <ComputerIcon class="text-gray-800 dark:text-white size-7" /> Proyectos
       </h2>
       <Projects />
@@ -104,8 +105,10 @@ const description =
     </SectionContainer>
 
     <SectionContainer id="sobre-mi">
-      <h2 class="text-gray-800 dark:text-white text-2xl font-semibold mb-6 flex gap-x-3 items-center">
-        <PersonIcon class=" text-gray-800 dark:text-white size-7" /> Sobre Mi
+      <h2
+        class="text-gray-800 dark:text-white text-2xl font-semibold mb-6 flex gap-x-3 items-center"
+      >
+        <PersonIcon class="text-gray-800 dark:text-white size-7" /> Sobre Mi
       </h2>
       <p class="text-gray-700 dark:text-gray-300 mb-4">
         <span class="text-blue-600 dark:text-blue-400 font-semibold"
@@ -128,7 +131,8 @@ const description =
       </p>
 
       <p class="text-gray-700 dark:text-gray-300 mb-4">
-        Me considero una persona <span class="text-blue-600 font-semibold dark:text-blue-400 "
+        Me considero una persona <span
+          class="text-blue-600 font-semibold dark:text-blue-400"
           >responsable, comprometida y con ganas de aprender</span
         >. Me gusta trabajar en equipo y aportar mis conocimientos para lograr
         los objetivos comunes. Estoy siempre dispuesto a enfrentar nuevos retos
@@ -137,8 +141,10 @@ const description =
 
       <p class="text-gray-700 dark:text-gray-300 mb-8">
         Inicié mi camino en la programación durante la secundaria en el <span
-          class="text-cyan-800 font-semibold dark:text-cyan-400 ">Colegio Tomás Edison</span
-        >, donde obtuve el título de <span class="text-orange-600 font-semibold dark:text-orange-300 "
+          class="text-cyan-800 font-semibold dark:text-cyan-400"
+          >Colegio Tomás Edison</span
+        >, donde obtuve el título de <span
+          class="text-orange-600 font-semibold dark:text-orange-300"
           >Bachiller en Informática con mención en Robótica y Programación</span
         >. Esa etapa fue clave para despertar mi vocación por el desarrollo de
         software y las tecnologías emergentes.
@@ -148,10 +154,62 @@ const description =
     </SectionContainer>
 
     <SectionContainer id="conocimientos">
-      <h2 class="text-gray-800 dark:text-white text-2xl font-semibold mb-2 flex gap-x-3 items-center">
+      <h2
+        class="text-gray-800 dark:text-white text-2xl font-semibold mb-2 flex gap-x-3 items-center"
+      >
         <CodeIcon class="text-gray-800 dark:text-white size-7" /> Mis conocimientos
       </h2>
       <SkillsCard />
+      <Separator />
+    </SectionContainer>
+
+    <SectionContainer id="contacto" class="text-center">
+      <h2
+        class="text-gray-800 dark:text-white text-3xl font-bold mb-8 flex justify-center gap-x-3 items-center"
+      >
+        <EnvelopeIcon class="text-gray-800 dark:text-white size-8" /> Contacto <EnvelopeIcon class="text-gray-800 dark:text-white size-8" />
+      </h2>
+
+      <p
+        class="text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mb-10 text-lg"
+      >
+        ¿Tienes un proyecto en mente o quieres colaborar?<br />
+        ¡Escríbeme y hablemos sobre cómo puedo ayudarte!
+      </p>
+
+      <!-- Contenedor de botones de contacto -->
+      <div class="flex flex-wrap justify-center gap-6 mb-12">
+        <!-- LinkedIn -->
+        <a
+          href="https://www.linkedin.com/in/ignacio-ezequiel-molina-granda-2a2aa6272/"
+          target="_blank"
+          class="flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all shadow-lg hover:shadow-xl"
+        >
+          <LinkedInIcon class="size-6" />
+          <span class="font-medium">LinkedIn</span>
+        </a>
+
+        <!-- GitHub -->
+        <a
+          href="https://github.com/Ignacio-Molina-0804"
+          target="_blank"
+          class="flex items-center gap-2 px-6 py-3 bg-gray-800 hover:bg-gray-900 text-white rounded-lg transition-all shadow-lg hover:shadow-xl"
+        >
+          <GithubIcon class="size-6" />
+          <span class="font-medium">GitHub</span>
+        </a>
+
+        <!-- Email -->
+        <a
+          href="mailto:molinagranda@gmail.com"
+          class="flex items-center gap-2 px-6 py-3 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-all shadow-lg hover:shadow-xl"
+        >
+          <GmailIcon class="size-6" />
+          <span class="font-medium">Email</span>
+        </a>
+      </div>
+
+      <Separator class="mt-16" />
     </SectionContainer>
   </main>
 
