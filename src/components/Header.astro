@@ -7,38 +7,59 @@ import InstallIcon from "./icons/Install.astro";
 ---
 
 <header class="fixed top-0 left-0 w-full z-50 bg-gray-500/70 dark:bg-black/70 backdrop-blur-md">
-  <div class="flex justify-between items-center w-full max-w-[1200px] mx-auto py-3 px-4 sm:py-4 md:py-5 lg:py-6">
-    <!-- Contenedor de navegación flexible -->
-    <nav class="flex flex-nowrap items-center gap-1 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8 overflow-x-auto py-2 scrollbar-hide">
-      <!-- Enlaces con tamaños responsive -->
-      <a class="text-white hover:text-blue-200 transition-colors duration-200 text-xs sm:text-sm md:text-base whitespace-nowrap px-1 sm:px-2" href="#top">Inicio</a>
-      <a class="text-white hover:text-blue-200 transition-colors duration-200 text-xs sm:text-sm md:text-base whitespace-nowrap px-1 sm:px-2" href="#experiencia">Experiencia</a>
-      <a class="text-white hover:text-blue-200 transition-colors duration-200 text-xs sm:text-sm md:text-base whitespace-nowrap px-1 sm:px-2" href="#proyectos">Proyectos</a>
-      <a class="text-white hover:text-blue-200 transition-colors duration-200 text-xs sm:text-sm md:text-base whitespace-nowrap px-1 sm:px-2" href="#sobre-mi">Sobre Mi</a>
-      <a class="text-white hover:text-blue-200 transition-colors duration-200 text-xs sm:text-sm md:text-base whitespace-nowrap px-1 sm:px-2" href="#conocimientos">Conocimientos</a>
-      <a class="text-white hover:text-blue-200 transition-colors duration-200 text-xs sm:text-sm md:text-base whitespace-nowrap px-1 sm:px-2" href="#contacto">Contacto</a>
+  <div class="flex justify-between items-center w-full xl:w-[1120px] mx-auto py-4 px-4 md:py-6">
+    <!-- Menú hamburguesa solo en móvil -->
+    <div class="md:hidden relative">
+      <button id="menu-toggle" class="p-2 text-white focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
       
-      <!-- Botón de CV con ajustes responsive -->
-      <a
-        href="/cv.pdf"
-        download="CV-Ignacio-Molina-Desarrollador.pdf"
-        class="ml-1 sm:ml-2 px-2 sm:px-3 py-1 sm:py-1.5 bg-transparent border border-amber-400 text-amber-400 hover:bg-amber-400/10 rounded-md transition-all duration-300 flex items-center gap-1 group whitespace-nowrap"
-      >
+      <!-- Menú desplegable -->
+      <div id="mobile-menu" class="hidden absolute left-0 mt-2 w-56 bg-gray-700 dark:bg-gray-800 rounded-md shadow-lg z-50">
+        <div class="px-2 py-2 space-y-1">
+          <a class="block px-3 py-2 text-white hover:bg-gray-600 rounded-md text-sm" href="#top">Inicio</a>
+          <a class="block px-3 py-2 text-white hover:bg-gray-600 rounded-md text-sm" href="#experiencia">Experiencia</a>
+          <a class="block px-3 py-2 text-white hover:bg-gray-600 rounded-md text-sm" href="#proyectos">Proyectos</a>
+          <a class="block px-3 py-2 text-white hover:bg-gray-600 rounded-md text-sm" href="#sobre-mi">Sobre Mi</a>
+          <a class="block px-3 py-2 text-white hover:bg-gray-600 rounded-md text-sm" href="#conocimientos">Conocimientos</a>
+          <a class="block px-3 py-2 text-white hover:bg-gray-600 rounded-md text-sm" href="#contacto">Contacto</a>
+          <a class="px-3 py-2 text-amber-400 hover:bg-amber-400/10 rounded-md text-sm border border-amber-400 flex items-center gap-2"
+            href="/cv.pdf" download="CV-Ignacio-Molina-Desarrollador.pdf">
+            <InstallIcon/>
+            Descargar CV
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menú normal para desktop -->
+    <nav class="hidden md:flex flex-row items-center gap-x-6 lg:gap-x-8">
+      <a class="text-white hover:text-blue-200 transition-colors duration-200 text-sm lg:text-base" href="#top">Inicio</a>
+      <a class="text-white hover:text-blue-200 transition-colors duration-200 text-sm lg:text-base" href="#experiencia">Experiencia</a>
+      <a class="text-white hover:text-blue-200 transition-colors duration-200 text-sm lg:text-base" href="#proyectos">Proyectos</a>
+      <a class="text-white hover:text-blue-200 transition-colors duration-200 text-sm lg:text-base" href="#sobre-mi">Sobre Mi</a>
+      <a class="text-white hover:text-blue-200 transition-colors duration-200 text-sm lg:text-base" href="#conocimientos">Conocimientos</a>
+      <a class="text-white hover:text-blue-200 transition-colors duration-200 text-sm lg:text-base" href="#contacto">Contacto</a>
+      <a href="/cv.pdf" download="CV-Ignacio-Molina-Desarrollador.pdf"
+        class="px-3 py-1.5 bg-transparent border border-amber-400 text-amber-400 hover:bg-amber-400/10 rounded-md transition-all duration-300 flex items-center gap-2 text-sm">
         <InstallIcon/>
-        <span class="text-xs sm:text-sm font-medium">CV</span>
+        <span>CV</span>
       </a>
     </nav>
 
-    <!-- Botón de tema con ajustes responsive -->
+    <!-- Botón de tema (siempre visible) -->
     <button
       id="theme-toggle"
-      class="ml-2 sm:ml-4 p-1 sm:p-1.5 md:p-2 rounded-full bg-gray-700 hover:bg-gray-600 transition-all duration-300 group"
+      class="p-2 rounded-full bg-gray-700 hover:bg-gray-600 transition-all duration-300"
       aria-label="Cambiar modo claro/oscuro"
       title="Cambiar tema"
     >
-      <div class="relative w-4 h-4 sm:w-5 sm:h-5">
+      <div class="relative w-5 h-5">
         <!-- Sol - visible en modo claro -->
         <SolIcon/>
+        
         <!-- Luna - visible en modo oscuro -->
         <LunaIcon/>
       </div>
@@ -47,5 +68,6 @@ import InstallIcon from "./icons/Install.astro";
 </header>
 
 <script>
+  import "/src/scripts/MenuPhone.ts";
   import "/src/scripts/ChangeMode.ts";
 </script>
