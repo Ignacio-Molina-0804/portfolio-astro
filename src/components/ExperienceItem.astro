@@ -15,14 +15,14 @@ const { title, date, description, link } = Astro.props;
   >
   </div>
   <time
-    class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+    class="mb-1 text-sm font-normal leading-none text-gray-900 dark:text-gray-500"
     >{date}</time
   >
   <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
     {title}
   </h3>
   <p
-    class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400 text-pretty"
+    class="mb-4 text-base font-normal text-gray-900 dark:text-gray-400 text-pretty"
   >
     {description}
   </p>
@@ -33,7 +33,7 @@ const { title, date, description, link } = Astro.props;
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+        class="inline-flex items-center px-4 py-2 text-sm font-medium border rounded-lg focus:z-10 focus:ring-4 focus:outline-none focus:text-blue-700 bg-gray-800 text-white border-gray-600 hover:text-gray-300 hover:bg-gray-700 focus:ring-gray-700"
       >
         Saber más...{" "}
         <svg

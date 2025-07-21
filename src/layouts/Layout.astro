@@ -11,27 +11,26 @@ const { title, description } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="h-full">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content={description}
-      <meta
-      name="viewport"
-      content="width=device-width"
-    />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
 
   <body class="px-4">
-    <!-- Fondo decorativo fijo -->
+    <!-- Fondo para modo claro -->
+    <div class="fixed inset-0 z-[-1] w-full h-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem] dark:hidden"></div>
+
+    <!-- Fondo para modo oscuro -->
     <div
       class="fixed inset-0 z-[-1] w-full h-full
-           bg-neutral-950
-           bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+         bg-neutral-950
+         bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]
+         hidden dark:block"
     >
     </div>
 

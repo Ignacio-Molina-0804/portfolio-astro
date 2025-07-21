@@ -1,12 +1,67 @@
-<header class="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-md">
-  <div class="flex justify-center items-center w-full xl:w-[1120px] mx-auto py-6">
+<header
+  class="fixed top-0 left-0 w-full z-50 bg-gray-500/70 dark:bg-black/70 backdrop-blur-md"
+>
+  <div
+    class="flex justify-between items-center w-full xl:w-[1120px] mx-auto py-6 px-4"
+  >
     <nav class="flex flex-row gap-x-10">
-      <a class="hover:text-blue-200" href="#top">Inicio</a>
-      <a class="hover:text-blue-200" href="#experiencia">Experiencia</a>
-      <a class="hover:text-blue-200" href="#proyectos">Proyectos</a>
-      <a class="hover:text-blue-200" href="#sobre-mi">Sobre Mi</a>
-      <a class="hover:text-blue-200" href="#conocimientos">Conocimientos</a>
-      <a class="hover:text-blue-200" href="#contacto">Contacto</a>
+      <a class="hover:text-blue-200 transition-colors duration-200" href="#top"
+        >Inicio</a
+      >
+      <a
+        class="hover:text-blue-200 transition-colors duration-200"
+        href="#experiencia">Experiencia</a
+      >
+      <a
+        class="hover:text-blue-200 transition-colors duration-200"
+        href="#proyectos">Proyectos</a
+      >
+      <a
+        class="hover:text-blue-200 transition-colors duration-200"
+        href="#sobre-mi">Sobre Mi</a
+      >
+      <a
+        class="hover:text-blue-200 transition-colors duration-200"
+        href="#conocimientos">Conocimientos</a
+      >
+      <a
+        class="hover:text-blue-200 transition-colors duration-200"
+        href="#contacto">Contacto</a
+      >
     </nav>
+
+    <button
+      id="theme-toggle"
+      class="ml-6 p-2 rounded-full bg-gray-700 hover:bg-gray-600 transition-all duration-300 group"
+      aria-label="Cambiar modo claro/oscuro"
+      title="Cambiar tema"
+    >
+      <div class="relative w-5 h-5">
+        <!-- Sol - visible en modo claro -->
+        <svg 
+          class="w-full h-full absolute inset-0 transition-all duration-300 dark:opacity-0 dark:rotate-90" 
+          viewBox="0 0 24 24" 
+          fill="none" 
+          stroke="currentColor" 
+          stroke-width="1.5"
+        >
+          <path d="M12 3v1m0 16v1m-9-9h1m16 0h1m-2.636-6.364l-.707.707M6.343 17.657l-.707.707m12.728 0l-.707-.707M6.343 6.343l-.707-.707" stroke-linecap="round"/>
+          <circle cx="12" cy="12" r="4" fill="currentColor"/>
+        </svg>
+        
+        <!-- Luna - visible en modo oscuro -->
+        <svg 
+          class="w-full h-full absolute inset-0 transition-all duration-300 opacity-0 dark:opacity-100 rotate-45 dark:rotate-0" 
+          viewBox="0 0 24 24" 
+          fill="currentColor"
+        >
+          <path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+        </svg>
+      </div>
+    </button>
   </div>
 </header>
+
+<script>
+  import "/src/scripts/changeMode.js";
+</script>

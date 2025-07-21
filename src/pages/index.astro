@@ -35,20 +35,28 @@ const description =
       />
       <div>
         <h1
-          class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-3 pb-6 lg:pb-10 text-pretty"
+          class="text-black dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-3 pb-6 lg:pb-10 text-pretty"
         >
           Hola, Soy Ignacio Molina
         </h1>
         <h2 class="text-xl lg:text-2xl py-3 md:max-w-[600px] text-pretty">
-          <span class="font-medium text-amber-300/95 drop-shadow-sm"
-            >Desarrollador Web y Back-End</span
+          <span
+            class="font-medium  text-amber-700/90 dark:text-amber-300/90 drop-shadow-sm"
           >
-          <span class="mx-2 text-gray-400 opacity-50">|</span>
-          <span class="text-gray-200/85"
-            >Autodidacta con proyectos 100% prácticos</span
+            Desarrollador Web y Back-End
+          </span>
+          <span class="mx-2 text-gray-400/60">|</span>
+          <span
+            class="text-gray-700/85 dark:text-gray-300/85"
           >
-          <span class="mx-2 text-gray-400 opacity-50">|</span>
-          <span class="text-blue-200/85">De Mendoza, Argentina</span>
+            Autodidacta con proyectos 100% prácticos
+          </span>
+          <span class="mx-2 text-gray-400/60">|</span>
+          <span
+            class="text-blue-600/85 dark:text-blue-300/85"
+          >
+            De Mendoza, Argentina
+          </span>
         </h2>
         <nav class="flex flex-wrap gap-8 mt-8">
           <ul>
@@ -80,57 +88,57 @@ const description =
     </SectionContainer>
 
     <SectionContainer id="experiencia">
-      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
-        <BriefCase class="size-7" /> Experiencia Laboral
+      <h2 class="text-gray-800 dark:text-white text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <BriefCase class="text-gray-800 dark:text-white size-7" /> Experiencia Laboral
       </h2>
       <Experience />
       <Separator />
     </SectionContainer>
 
     <SectionContainer id="proyectos">
-      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
-        <ComputerIcon class="size-7" /> Proyectos
+      <h2 class="text-gray-800 dark:text-white text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <ComputerIcon class="text-gray-800 dark:text-white size-7" /> Proyectos
       </h2>
       <Projects />
       <Separator />
     </SectionContainer>
 
     <SectionContainer id="sobre-mi">
-      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
-        <PersonIcon class="size-7" /> Sobre Mi
+      <h2 class="text-gray-800 dark:text-white text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <PersonIcon class=" text-gray-800 dark:text-white size-7" /> Sobre Mi
       </h2>
-      <p class="text-gray-300 mb-4">
-        <span class="text-blue-400 font-semibold"
+      <p class="text-gray-700 dark:text-gray-300 mb-4">
+        <span class="text-blue-600 dark:text-blue-400 font-semibold"
           >Soy un desarrollador web y back-end autodidacta</span
         > de Mendoza, Argentina. Me apasiona aprender y crear proyectos prácticos
         que resuelvan problemas reales.
-        <span class="text-green-400"
+        <span class="text-green-600 font-semibold dark:text-green-400"
           >En mi tiempo libre, disfruto programar por hobby y explorar nuevas
           tecnologías para ampliar mis conocimientos.</span
         >
         Actualmente, estoy finalizando la <span
-          class="text-yellow-300 font-medium"
+          class="text-yellow-700 font-semibold dark:text-yellow-300"
           >Tecnicatura Universitaria en Programación</span
         > en la UTN (Universidad Tecnológica Nacional).
-        <span class="text-purple-400"
+        <span class="text-purple-950 font-semibold dark:text-purple-400"
           >Estoy abierto tanto a incorporarme a una empresa como a trabajar de
           forma freelance</span
         >, siempre en busca de nuevos desafíos que me permitan seguir creciendo
         profesionalmente.
       </p>
 
-      <p class="text-gray-300 mb-4">
-        Me considero una persona <span class="text-blue-400 font-semibold"
+      <p class="text-gray-700 dark:text-gray-300 mb-4">
+        Me considero una persona <span class="text-blue-600 font-semibold dark:text-blue-400 "
           >responsable, comprometida y con ganas de aprender</span
         >. Me gusta trabajar en equipo y aportar mis conocimientos para lograr
         los objetivos comunes. Estoy siempre dispuesto a enfrentar nuevos retos
         y aprender de ellos.
       </p>
 
-      <p class="text-gray-300 mb-8">
+      <p class="text-gray-700 dark:text-gray-300 mb-8">
         Inicié mi camino en la programación durante la secundaria en el <span
-          class="text-cyan-400 font-medium">Colegio Tomás Edison</span
-        >, donde obtuve el título de <span class="text-orange-300 font-semibold"
+          class="text-cyan-800 font-semibold dark:text-cyan-400 ">Colegio Tomás Edison</span
+        >, donde obtuve el título de <span class="text-orange-600 font-semibold dark:text-orange-300 "
           >Bachiller en Informática con mención en Robótica y Programación</span
         >. Esa etapa fue clave para despertar mi vocación por el desarrollo de
         software y las tecnologías emergentes.
@@ -140,8 +148,8 @@ const description =
     </SectionContainer>
 
     <SectionContainer id="conocimientos">
-      <h2 class="text-2xl font-semibold mb-2 flex gap-x-3 items-center">
-        <CodeIcon class="size-7" /> Mis conocimientos
+      <h2 class="text-gray-800 dark:text-white text-2xl font-semibold mb-2 flex gap-x-3 items-center">
+        <CodeIcon class="text-gray-800 dark:text-white size-7" /> Mis conocimientos
       </h2>
       <SkillsCard />
     </SectionContainer>
