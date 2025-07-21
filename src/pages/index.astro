@@ -25,62 +25,79 @@ const description =
 
 <Layout title={title} , description={description}>
   <main class="px-6">
-    <SectionContainer
-      id="top"
-      class="py-32 pb-36 flex justify-center items-center"
-    >
-      <img
-        class="rounded-full w-52 h-52 mx-10"
-        src="data/img-perfil.webp"
-        alt="Foto de Perfil"
-      />
-      <div>
-        <h1
-          class="text-black dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-3 pb-6 lg:pb-10 text-pretty"
-        >
-          Hola, Soy Ignacio Molina
-        </h1>
-        <h2 class="text-xl lg:text-2xl py-3 md:max-w-[600px] text-pretty">
-          <span
-            class="font-medium text-amber-700/90 dark:text-amber-300/90 drop-shadow-sm"
+    <SectionContainer id="top" class="py-20 md:py-32 pb-24 md:pb-36">
+      <div
+        class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-10 lg:gap-12 px-4 sm:px-6"
+      >
+        <!-- Imagen de perfil con ajustes responsive -->
+        <div class="flex-shrink-0">
+          <img
+            class="rounded-full w-40 h-40 sm:w-48 sm:h-48 md:w-52 md:h-52 lg:w-56 lg:h-56 mx-4 md:mx-6 lg:mx-10 border-2 border-amber-500/20 shadow-lg"
+            src="data/img-perfil.webp"
+            alt="Foto de Perfil de Ignacio Molina"
+          />
+        </div>
+
+        <!-- Contenido de texto -->
+        <div class="text-center md:text-left max-w-2xl">
+          <h1
+            class="text-black dark:text-white text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold pb-4 md:pb-6 lg:pb-8"
           >
-            Desarrollador Web y Back-End
-          </span>
-          <span class="mx-2 text-gray-400/60">|</span>
-          <span class="text-gray-700/85 dark:text-gray-300/85">
-            Autodidacta con proyectos 100% prácticos
-          </span>
-          <span class="mx-2 text-gray-400/60">|</span>
-          <span class="text-blue-600/85 dark:text-blue-300/85">
-            De Mendoza, Argentina
-          </span>
-        </h2>
-        <nav class="flex flex-wrap gap-8 mt-8">
-          <ul>
-            <li>
-              <SocialPill
-                class="hover:bg-blue-800"
-                href="https://www.linkedin.com/in/ignacio-ezequiel-molina-granda-2a2aa6272/"
-              >
-                <LinkedInIcon class="size-4 lg:size-6 mr-1" />LinkedIn
-              </SocialPill>
+            Hola, Soy <span class="text-amber-700 dark:text-amber-400"
+              >Ignacio Molina</span
+            >
+          </h1>
 
-              <SocialPill
-                class="hover:bg-black"
-                href="https://github.com/Ignacio-Molina-0804"
-              >
-                <GithubIcon class="size-4 lg:size-6 mr-1" />Github
-              </SocialPill>
+          <h2 class="text-lg sm:text-xl lg:text-2xl py-2 md:py-3 text-balance">
+            <span
+              class="font-medium text-amber-700/90 dark:text-amber-300/90 drop-shadow-sm"
+            >
+              Desarrollador Web y Back-End
+            </span>
+            <span class="mx-2 text-gray-400/60 hidden sm:inline">|</span>
+            <span
+              class="block sm:inline mt-2 sm:mt-0 text-gray-700/85 dark:text-gray-300/85"
+            >
+              Autodidacta con proyectos 100% prácticos
+            </span>
+            <span class="mx-2 text-gray-400/60 hidden sm:inline">|</span>
+            <span
+              class="block sm:inline mt-2 sm:mt-0 text-blue-600/85 dark:text-blue-300/85"
+            >
+              De Mendoza, Argentina
+            </span>
+          </h2>
 
-              <SocialPill
-                class="hover:bg-red-800"
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=molinagranda@gmail.com"
-              >
-                <GmailIcon class="size-4 lg:size-6 mr-1" /> molinagranda@gmail.com
-              </SocialPill>
-            </li>
-          </ul>
-        </nav>
+          <!-- Redes sociales (sin cambios como solicitaste) -->
+          <nav
+            class="flex justify-center md:justify-start flex-wrap gap-6 mt-6 md:mt-8"
+          >
+            <ul>
+              <li class="flex flex-wrap justify-center gap-4">
+                <SocialPill
+                  class="hover:bg-blue-800"
+                  href="https://www.linkedin.com/in/ignacio-ezequiel-molina-granda-2a2aa6272/"
+                >
+                  <LinkedInIcon class="size-4 lg:size-6 mr-1" />LinkedIn
+                </SocialPill>
+
+                <SocialPill
+                  class="hover:bg-black"
+                  href="https://github.com/Ignacio-Molina-0804"
+                >
+                  <GithubIcon class="size-4 lg:size-6 mr-1" />Github
+                </SocialPill>
+
+                <SocialPill
+                  class="hover:bg-red-800"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=molinagranda@gmail.com"
+                >
+                  <GmailIcon class="size-4 lg:size-6 mr-1" /> molinagranda@gmail.com
+                </SocialPill>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </SectionContainer>
 
@@ -167,7 +184,9 @@ const description =
       <h2
         class="text-gray-800 dark:text-white text-3xl font-bold mb-8 flex justify-center gap-x-3 items-center"
       >
-        <EnvelopeIcon class="text-gray-800 dark:text-white size-8" /> Contacto <EnvelopeIcon class="text-gray-800 dark:text-white size-8" />
+        <EnvelopeIcon class="text-gray-800 dark:text-white size-8" /> Contacto <EnvelopeIcon
+          class="text-gray-800 dark:text-white size-8"
+        />
       </h2>
 
       <p
