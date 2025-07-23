@@ -16,219 +16,197 @@ import Separator from "../components/Separator.astro";
 import Footer from "../components/Footer.astro";
 import EnvelopeIcon from "../components/icons/Envelope.astro";
 
-const title =
-  "Portfolio de Ignacio Molina - Desarrollador y Programador Web y Back-End";
-const description =
-  "Desarrollador Web (Astro/HTML/CSS/TailWind/JavaScript/TypeScript) y Back-End en Java Spring Boot | Conocimientos en JPA, APIs REST y MySQL | Autodidacta con proyectos prácticos | Portfolio técnico";
+import { useTranslations } from "../i18n/util";
+import { languageList } from "../i18n/ui";
+
+const currentLang = Astro.currentLocale || "es";
+const t = useTranslations(currentLang as keyof typeof languageList);
 ---
 
-<Layout title={title} , description={description}>
+<Layout title={t("index.title")} description={t("index.description")}>
   <main class="px-6">
     <SectionContainer id="top" class="py-20 md:py-32 pb-24 md:pb-36">
-      <div
-        class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-10 lg:gap-12 px-4 sm:px-6"
-      >
-        <!-- Imagen de perfil con ajustes responsive -->
-        <div class="flex-shrink-0">
-          <img
-            class="rounded-full w-40 h-40 sm:w-48 sm:h-48 md:w-52 md:h-52 lg:w-56 lg:h-56 mx-4 md:mx-6 lg:mx-10 border-2 border-amber-500/20 shadow-lg"
-            src="data/img-perfil.webp"
-            alt="Foto de Perfil de Ignacio Molina"
-          />
+      <SectionContainer id="top" class="py-20 md:py-32 pb-24 md:pb-36">
+        <div
+          class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-10 lg:gap-12 px-4 sm:px-6"
+        >
+          <!-- Imagen de perfil con ajustes responsive -->
+          <div class="flex-shrink-0">
+            <img
+              class="rounded-full w-40 h-40 sm:w-48 sm:h-48 md:w-52 md:h-52 lg:w-56 lg:h-56 mx-4 md:mx-6 lg:mx-10 border-2 border-amber-500/20 shadow-lg"
+              src="data/img-perfil.webp"
+              alt="Foto de Perfil de Ignacio Molina"
+            />
+          </div>
+
+          <!-- Contenido de texto -->
+          <div class="text-center md:text-left max-w-2xl">
+            
+            <div set:html={t('top.content')}></div>
+
+            <!-- Redes sociales (sin cambios como solicitaste) -->
+            <nav
+              class="flex justify-center md:justify-start flex-wrap gap-6 mt-6 md:mt-8"
+            >
+              <ul>
+                <li class="flex flex-wrap justify-center gap-4">
+                  <SocialPill
+                    class="hover:bg-blue-800"
+                    href="https://www.linkedin.com/in/ignacio-ezequiel-molina-granda-2a2aa6272/"
+                  >
+                    <LinkedInIcon class="size-4 lg:size-6 mr-1" />LinkedIn
+                  </SocialPill>
+
+                  <SocialPill
+                    class="hover:bg-black"
+                    href="https://github.com/Ignacio-Molina-0804"
+                  >
+                    <GithubIcon class="size-4 lg:size-6 mr-1" />Github
+                  </SocialPill>
+
+                  <SocialPill
+                    class="hover:bg-red-800"
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=molinagranda@gmail.com"
+                  >
+                    <GmailIcon class="size-4 lg:size-6 mr-1" /> molinagranda@gmail.com
+                  </SocialPill>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </SectionContainer>
+
+      <SectionContainer id="experiencia">
+        <h2
+          class="text-gray-800 dark:text-white text-2xl font-semibold mb-6 flex gap-x-3 items-center"
+        >
+          <BriefCase class="text-gray-800 dark:text-white size-7" /> Experiencia
+          Laboral
+        </h2>
+        <Experience />
+        <Separator />
+      </SectionContainer>
+
+      <SectionContainer id="proyectos">
+        <h2
+          class="text-gray-800 dark:text-white text-2xl font-semibold mb-6 flex gap-x-3 items-center"
+        >
+          <ComputerIcon class="text-gray-800 dark:text-white size-7" /> Proyectos
+        </h2>
+        <Projects />
+        <Separator />
+      </SectionContainer>
+
+      <SectionContainer id="sobre-mi">
+        <h2
+          class="text-gray-800 dark:text-white text-2xl font-semibold mb-6 flex gap-x-3 items-center"
+        >
+          <PersonIcon class="text-gray-800 dark:text-white size-7" /> Sobre Mi
+        </h2>
+        <p class="text-gray-700 dark:text-gray-300 mb-6">
+          <span class="text-blue-600 dark:text-blue-400 font-semibold">
+            Soy Ignacio, aunque muchos me conocen como Nacho o Molina.
+          </span>
+          Empecé a programar por curiosidad en la secundaria y desde entonces me
+          apasiona entender cómo funcionan las cosas y crear soluciones útiles.
+          <span class="text-green-600 font-semibold dark:text-green-400">
+            Me gusta aprender de forma autodidacta, explorar tecnologías nuevas
+            y meter mano hasta resolver lo que me propongo.
+          </span>
+          Actualmente estoy finalizando la <span
+            class="text-yellow-700 font-semibold dark:text-yellow-300"
+          >
+            Tecnicatura Universitaria en Programación
+          </span> en la UTN, y estoy abierto a sumarme a un equipo o trabajar de
+          forma freelance.
+        </p>
+
+        <p class="text-gray-700 dark:text-gray-300 mb-6">
+          <span class="text-blue-600 font-semibold dark:text-blue-400">
+            Soy responsable, curioso y disfruto trabajar en equipo.
+          </span>
+          Si algo no lo sé, lo investigo, lo pruebo y lo aprendo en el camino. Creo
+          en los desafíos como una oportunidad para crecer.
+        </p>
+
+        <p class="text-gray-700 dark:text-gray-300 mb-8">
+          Mi primer acercamiento a la programación fue en el <span
+            class="text-cyan-800 font-semibold dark:text-cyan-400"
+          >
+            Colegio Tomás Edison
+          </span>, donde me gradué como <span
+            class="text-orange-600 font-semibold dark:text-orange-300"
+          >
+            Bachiller en Informática con mención en Robótica y Programación
+          </span>. Esa etapa fue clave para despertar mi interés por el
+          desarrollo y la tecnología.
+        </p>
+
+        <Separator />
+      </SectionContainer>
+
+      <SectionContainer id="conocimientos">
+        <h2
+          class="text-gray-800 dark:text-white text-2xl font-semibold mb-2 flex gap-x-3 items-center"
+        >
+          <CodeIcon class="text-gray-800 dark:text-white size-7" /> Mis conocimientos
+        </h2>
+        <SkillsCard />
+        <Separator />
+      </SectionContainer>
+
+      <SectionContainer id="contacto" class="text-center">
+        <h2
+          class="text-gray-800 dark:text-white text-3xl font-bold mb-8 flex justify-center gap-x-3 items-center"
+        >
+          <EnvelopeIcon class="text-gray-800 dark:text-white size-8" /> Contacto
+          <EnvelopeIcon class="text-gray-800 dark:text-white size-8" />
+        </h2>
+
+        <p
+          class="text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mb-10 text-lg"
+        >
+          ¿Tienes un proyecto en mente o quieres colaborar?<br />
+          ¡Escríbeme y hablemos sobre cómo puedo ayudarte!
+        </p>
+
+        <!-- Contenedor de botones de contacto -->
+        <div class="flex flex-wrap justify-center gap-6 mb-12">
+          <!-- LinkedIn -->
+          <a
+            href="https://www.linkedin.com/in/ignacio-ezequiel-molina-granda-2a2aa6272/"
+            target="_blank"
+            class="flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all shadow-lg hover:shadow-xl"
+          >
+            <LinkedInIcon class="size-6" />
+            <span class="font-medium">LinkedIn</span>
+          </a>
+
+          <!-- GitHub -->
+          <a
+            href="https://github.com/Ignacio-Molina-0804"
+            target="_blank"
+            class="flex items-center gap-2 px-6 py-3 bg-gray-800 hover:bg-gray-900 text-white rounded-lg transition-all shadow-lg hover:shadow-xl"
+          >
+            <GithubIcon class="size-6" />
+            <span class="font-medium">GitHub</span>
+          </a>
+
+          <!-- Email -->
+          <a
+            href="mailto:molinagranda@gmail.com"
+            class="flex items-center gap-2 px-6 py-3 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-all shadow-lg hover:shadow-xl"
+          >
+            <GmailIcon class="size-6" />
+            <span class="font-medium">Email</span>
+          </a>
         </div>
 
-        <!-- Contenido de texto -->
-        <div class="text-center md:text-left max-w-2xl">
-          <h1
-            class="text-black dark:text-white text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold pb-4 md:pb-6 lg:pb-8"
-          >
-            Hola, Soy <span class="text-amber-700 dark:text-amber-400"
-              >Ignacio Molina</span
-            >
-          </h1>
-
-          <h2 class="text-lg sm:text-xl lg:text-2xl py-2 md:py-3 text-balance">
-            <span
-              class="font-medium text-amber-700/90 dark:text-amber-300/90 drop-shadow-sm"
-            >
-              Desarrollador Web y Back-End
-            </span>
-            <span class="mx-2 text-gray-400/60 hidden sm:inline">|</span>
-            <span
-              class="block sm:inline mt-2 sm:mt-0 text-gray-700/85 dark:text-gray-300/85"
-            >
-              Autodidacta con proyectos 100% prácticos
-            </span>
-            <span class="mx-2 text-gray-400/60 hidden sm:inline">|</span>
-            <span
-              class="block sm:inline mt-2 sm:mt-0 text-blue-600/85 dark:text-blue-300/85"
-            >
-              De Mendoza, Argentina
-            </span>
-          </h2>
-
-          <!-- Redes sociales (sin cambios como solicitaste) -->
-          <nav
-            class="flex justify-center md:justify-start flex-wrap gap-6 mt-6 md:mt-8"
-          >
-            <ul>
-              <li class="flex flex-wrap justify-center gap-4">
-                <SocialPill
-                  class="hover:bg-blue-800"
-                  href="https://www.linkedin.com/in/ignacio-ezequiel-molina-granda-2a2aa6272/"
-                >
-                  <LinkedInIcon class="size-4 lg:size-6 mr-1" />LinkedIn
-                </SocialPill>
-
-                <SocialPill
-                  class="hover:bg-black"
-                  href="https://github.com/Ignacio-Molina-0804"
-                >
-                  <GithubIcon class="size-4 lg:size-6 mr-1" />Github
-                </SocialPill>
-
-                <SocialPill
-                  class="hover:bg-red-800"
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=molinagranda@gmail.com"
-                >
-                  <GmailIcon class="size-4 lg:size-6 mr-1" /> molinagranda@gmail.com
-                </SocialPill>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
+        <Separator class="mt-16" />
+      </SectionContainer>
     </SectionContainer>
 
-    <SectionContainer id="experiencia">
-      <h2
-        class="text-gray-800 dark:text-white text-2xl font-semibold mb-6 flex gap-x-3 items-center"
-      >
-        <BriefCase class="text-gray-800 dark:text-white size-7" /> Experiencia Laboral
-      </h2>
-      <Experience />
-      <Separator />
-    </SectionContainer>
-
-    <SectionContainer id="proyectos">
-      <h2
-        class="text-gray-800 dark:text-white text-2xl font-semibold mb-6 flex gap-x-3 items-center"
-      >
-        <ComputerIcon class="text-gray-800 dark:text-white size-7" /> Proyectos
-      </h2>
-      <Projects />
-      <Separator />
-    </SectionContainer>
-
-    <SectionContainer id="sobre-mi">
-      <h2
-        class="text-gray-800 dark:text-white text-2xl font-semibold mb-6 flex gap-x-3 items-center"
-      >
-        <PersonIcon class="text-gray-800 dark:text-white size-7" /> Sobre Mi
-      </h2>
-      <p class="text-gray-700 dark:text-gray-300 mb-6">
-        <span class="text-blue-600 dark:text-blue-400 font-semibold">
-          Soy Ignacio, aunque muchos me conocen como Nacho o Molina.
-        </span>
-        Empecé a programar por curiosidad en la secundaria y desde entonces me apasiona
-        entender cómo funcionan las cosas y crear soluciones útiles.
-        <span class="text-green-600 font-semibold dark:text-green-400">
-          Me gusta aprender de forma autodidacta, explorar tecnologías nuevas y
-          meter mano hasta resolver lo que me propongo.
-        </span>
-        Actualmente estoy finalizando la <span
-          class="text-yellow-700 font-semibold dark:text-yellow-300"
-        >
-          Tecnicatura Universitaria en Programación
-        </span> en la UTN, y estoy abierto a sumarme a un equipo o trabajar de forma
-        freelance.
-      </p>
-
-      <p class="text-gray-700 dark:text-gray-300 mb-6">
-        <span class="text-blue-600 font-semibold dark:text-blue-400">
-          Soy responsable, curioso y disfruto trabajar en equipo.
-        </span>
-        Si algo no lo sé, lo investigo, lo pruebo y lo aprendo en el camino. Creo
-        en los desafíos como una oportunidad para crecer.
-      </p>
-
-      <p class="text-gray-700 dark:text-gray-300 mb-8">
-        Mi primer acercamiento a la programación fue en el <span
-          class="text-cyan-800 font-semibold dark:text-cyan-400"
-        >
-          Colegio Tomás Edison
-        </span>, donde me gradué como <span
-          class="text-orange-600 font-semibold dark:text-orange-300"
-        >
-          Bachiller en Informática con mención en Robótica y Programación
-        </span>. Esa etapa fue clave para despertar mi interés por el desarrollo
-        y la tecnología.
-      </p>
-
-      <Separator />
-    </SectionContainer>
-
-    <SectionContainer id="conocimientos">
-      <h2
-        class="text-gray-800 dark:text-white text-2xl font-semibold mb-2 flex gap-x-3 items-center"
-      >
-        <CodeIcon class="text-gray-800 dark:text-white size-7" /> Mis conocimientos
-      </h2>
-      <SkillsCard />
-      <Separator />
-    </SectionContainer>
-
-    <SectionContainer id="contacto" class="text-center">
-      <h2
-        class="text-gray-800 dark:text-white text-3xl font-bold mb-8 flex justify-center gap-x-3 items-center"
-      >
-        <EnvelopeIcon class="text-gray-800 dark:text-white size-8" /> Contacto <EnvelopeIcon
-          class="text-gray-800 dark:text-white size-8"
-        />
-      </h2>
-
-      <p
-        class="text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mb-10 text-lg"
-      >
-        ¿Tienes un proyecto en mente o quieres colaborar?<br />
-        ¡Escríbeme y hablemos sobre cómo puedo ayudarte!
-      </p>
-
-      <!-- Contenedor de botones de contacto -->
-      <div class="flex flex-wrap justify-center gap-6 mb-12">
-        <!-- LinkedIn -->
-        <a
-          href="https://www.linkedin.com/in/ignacio-ezequiel-molina-granda-2a2aa6272/"
-          target="_blank"
-          class="flex items-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-all shadow-lg hover:shadow-xl"
-        >
-          <LinkedInIcon class="size-6" />
-          <span class="font-medium">LinkedIn</span>
-        </a>
-
-        <!-- GitHub -->
-        <a
-          href="https://github.com/Ignacio-Molina-0804"
-          target="_blank"
-          class="flex items-center gap-2 px-6 py-3 bg-gray-800 hover:bg-gray-900 text-white rounded-lg transition-all shadow-lg hover:shadow-xl"
-        >
-          <GithubIcon class="size-6" />
-          <span class="font-medium">GitHub</span>
-        </a>
-
-        <!-- Email -->
-        <a
-          href="mailto:molinagranda@gmail.com"
-          class="flex items-center gap-2 px-6 py-3 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-all shadow-lg hover:shadow-xl"
-        >
-          <GmailIcon class="size-6" />
-          <span class="font-medium">Email</span>
-        </a>
-      </div>
-
-      <Separator class="mt-16" />
-    </SectionContainer>
+    <Footer class="mt-auto" />
   </main>
-
-  <Footer class="mt-auto" />
 </Layout>

@@ -7,17 +7,72 @@ export const languageList = {
 
 export const labels = {
     es: {
-        'nav.home': 'Inicio',
-        'nav.about': 'Acerca de',
-        'home.title': 'Hola a todos',
-        'about.title': 'Acerca de la comunidad',
-        'nav.language': 'Idioma' 
+
+        'page.title': 'Portfolio Ignacio Molina',
+        'page.description': "Desarrollador Web (Astro/HTML/CSS/TailWind/JavaScript/TypeScript) y Back-End en Java Spring Boot | Conocimientos en JPA, APIs REST y MySQL | Autodidacta con proyectos prácticos | Portfolio técnico",
+
+        'index.title':'Portfolio de Ignacio Molina - Desarrollador y Programador Web y Back-End',
+        'index.description':'Desarrollador Web (Astro/HTML/CSS/TailWind/JavaScript/TypeScript) y Back-End en Java Spring Boot | Conocimientos en JPA, APIs REST y MySQL | Autodidacta con proyectos prácticos | Portfolio técnico',
+
+        'top.content':
+            `<h1
+                    class="text-black dark:text-white text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold pb-4 md:pb-6 lg:pb-8"
+                >
+                    Hola, Soy <span class="text-amber-700 dark:text-amber-400"
+                    >Ignacio Molina</span
+                    >
+                </h1>
+
+                <h2 class="text-lg sm:text-xl lg:text-2xl py-2 md:py-3 text-balance">
+                    <span
+                    class="font-medium text-amber-700/90 dark:text-amber-300/90 drop-shadow-sm"
+                    >
+                    Desarrollador Web y Back-End
+                    </span>
+                    <span class="mx-2 text-gray-400/60 hidden sm:inline">|</span>
+                    <span
+                    class="block sm:inline mt-2 sm:mt-0 text-gray-700/85 dark:text-gray-300/85"
+                    >
+                    Autodidacta con proyectos 100% prácticos
+                    </span>
+                    <span class="mx-2 text-gray-400/60 hidden sm:inline">|</span>
+                    <span
+                    class="block sm:inline mt-2 sm:mt-0 text-blue-600/85 dark:text-blue-300/85"
+                    >
+                    De Mendoza, Argentina
+                    </span>
+                </h2>`        
+
+
     },
     en: {
-        'nav.home': 'Home',
-        'nav.about': 'About',
-        'home.title': 'Hello everyone',
-        'about.title': 'About the community',
-        'nav.language': 'Language' 
+
+        'page.title': 'Portfolio Ignacio Molina',
+        'page.description': "Web Developer (Astro/HTML/CSS/TailWind/JavaScript/TypeScript) and Back-End in Java Spring Boot | Knowledge in JPA, REST APIs and MySQL | Self-taught with practical projects | Technical portfolio",
+        
+        'index.title':'Portfolio of Ignacio Molina - Web and Back-End Developer',
+        'index.description':'Web Developer (Astro/HTML/CSS/TailWind/JavaScript/TypeScript) and Back-End in Java Spring Boot | Knowledge in JPA, REST APIs and MySQL | Self-taught with practical projects | Technical portfolio',
+
+        'top.content':
+        `<h1 class="text-black dark:text-white text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold pb-4 md:pb-6 lg:pb-8">
+                Hi, I'm <span class="text-amber-700 dark:text-amber-400">Ignacio Molina</span>
+            </h1>
+
+            <h2 class="text-lg sm:text-xl lg:text-2xl py-2 md:py-3 text-balance">
+                <span class="font-medium text-amber-700/90 dark:text-amber-300/90 drop-shadow-sm">
+                Web and Back-End Developer
+                </span>
+                <span class="mx-2 text-gray-400/60 hidden sm:inline">|</span>
+                <span class="block sm:inline mt-2 sm:mt-0 text-gray-700/85 dark:text-gray-300/85">
+                Self-taught with 100% hands-on projects
+                </span>
+                <span class="mx-2 text-gray-400/60 hidden sm:inline">|</span>
+                <span class="block sm:inline mt-2 sm:mt-0 text-blue-600/85 dark:text-blue-300/85">
+                Based in Mendoza, Argentina
+                </span>
+            </h2>`
+
+
     }
+
 };
