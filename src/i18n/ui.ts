@@ -8,9 +8,11 @@ export const languageList = {
 export const labels = {
     es: {
 
+        // Meta Tags
         'page.title': 'Portfolio Ignacio Molina',
         'page.description': "Desarrollador Web (Astro/HTML/CSS/TailWind/JavaScript/TypeScript) y Back-End en Java Spring Boot | Conocimientos en JPA, APIs REST y MySQL | Autodidacta con proyectos prácticos | Portfolio técnico",
 
+        // Top
         'index.title':'Portfolio de Ignacio Molina - Desarrollador y Programador Web y Back-End',
         'index.description':'Desarrollador Web (Astro/HTML/CSS/TailWind/JavaScript/TypeScript) y Back-End en Java Spring Boot | Conocimientos en JPA, APIs REST y MySQL | Autodidacta con proyectos prácticos | Portfolio técnico',
 
@@ -41,15 +43,28 @@ export const labels = {
                     >
                     De Mendoza, Argentina
                     </span>
-                </h2>`        
+                </h2>`,        
 
+        // Experiencia Laboral
+        'experience.title': 'Experiencia Laboral',
+        'experience.look': 'Ver Sitio...',
+
+        'experience.item.date' : 'Junio 2025 - Presente',
+        'experience.item.title': 'Sitio Web para Empresa de Montañismo',
+        'experience.item.description':'Desarrollo de una aplicación web moderna, adaptable y profesional para una empresa dedicada al montañismo y actividades de aventura. El proyecto incluye secciones informativas, galería de imágenes, agenda de salidas y un canal de contacto. Programado con Astro, JavaScript, TypeScript y Tailwind CSS.',
+
+        'experience.item.date2' : 'Junio 2025 - Presente',
+        'experience.item.title2': 'Sitio Web para Empresa de Montañismo',
+        'experience.item.description2':'Desarrollo de una aplicación web moderna, adaptable y profesional para una empresa dedicada al montañismo y actividades de aventura. El proyecto incluye secciones informativas, galería de imágenes, agenda de salidas y un canal de contacto. Programado con Astro, JavaScript, TypeScript y Tailwind CSS.',
 
     },
     en: {
 
+        // Meta Tags
         'page.title': 'Portfolio Ignacio Molina',
         'page.description': "Web Developer (Astro/HTML/CSS/TailWind/JavaScript/TypeScript) and Back-End in Java Spring Boot | Knowledge in JPA, REST APIs and MySQL | Self-taught with practical projects | Technical portfolio",
         
+        // Top
         'index.title':'Portfolio of Ignacio Molina - Web and Back-End Developer',
         'index.description':'Web Developer (Astro/HTML/CSS/TailWind/JavaScript/TypeScript) and Back-End in Java Spring Boot | Knowledge in JPA, REST APIs and MySQL | Self-taught with practical projects | Technical portfolio',
 
@@ -70,7 +85,19 @@ export const labels = {
                 <span class="block sm:inline mt-2 sm:mt-0 text-blue-600/85 dark:text-blue-300/85">
                 Based in Mendoza, Argentina
                 </span>
-            </h2>`
+            </h2>`,
+
+        // Work Experience
+        'experience.title': 'Work Experience',
+        'experience.look': 'View Site...',
+
+        'experience.item.date' : 'June 2025 - Present',
+        'experience.item.title': 'Website for Mountaineering Company',
+        'experience.item.description':'Development of a modern, adaptable, and professional web application for a company dedicated to mountaineering and adventure activities. The project includes informational sections, image gallery, outing schedule, and a contact channel. Programmed with Astro, JavaScript, TypeScript, and Tailwind CSS.',
+
+        'experience.item.date2' : 'June 2025 - Present',
+        'experience.item.title2': 'Website for Mountaineering Company',
+        'experience.item.description2':'Development of a modern, adaptable, and professional web application for a company dedicated to mountaineering and adventure activities. The project includes informational sections, image gallery, outing schedule, and a contact channel. Programmed with Astro, JavaScript, TypeScript, and Tailwind CSS.',
 
 
     }

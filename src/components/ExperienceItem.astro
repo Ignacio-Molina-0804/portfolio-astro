@@ -7,6 +7,12 @@ interface Props {
 }
 
 const { title, date, description, link } = Astro.props;
+
+import { useTranslations } from "../i18n/util";
+import { languageList } from "../i18n/ui";
+
+const currentLang = Astro.currentLocale || "es";
+const t = useTranslations(currentLang as keyof typeof languageList);
 ---
 
 <li class="mb-10 ms-4">
@@ -35,7 +41,7 @@ const { title, date, description, link } = Astro.props;
         rel="noopener noreferrer"
         class="inline-flex items-center px-4 py-2 text-sm font-medium border rounded-lg focus:z-10 focus:ring-4 focus:outline-none focus:text-blue-700 bg-gray-800 text-white border-gray-600 hover:text-gray-300 hover:bg-gray-700 focus:ring-gray-700"
       >
-        Ver Sitio...{" "}
+        {t("experience.look")}{" "}
         <svg
           class="w-3 h-3 ms-2 rtl:rotate-180"
           aria-hidden="true"
