@@ -14,12 +14,12 @@ if (languageBtn && languageLabel) {
     ? `<img
         src="https://flagcdn.com/w2560/us.webp"
         alt="Bandera de Estados Unidos"
-        class="block mx-auto w-[23px] h-[20px] rounded-full select-none cursor-zoom-in bg-[hsl(0,0%,90%)] transition-colors duration-300"
+        class="block mx-auto w-[23px] h-[20px] rounded-full select-none cursor-pointer bg-[hsl(0,0%,90%)] transition-colors duration-300"
       />`
     : `<img
         src="https://flagcdn.com/w2560/ar.webp"
         alt="Bandera de Argentina"
-        class="block mx-auto w-[23px] h-[20px] rounded-full select-none cursor-zoom-in bg-[hsl(0,0%,90%)] transition-colors duration-300"
+        class="block mx-auto w-[23px] h-[20px] rounded-full select-none cursor-pointer bg-[hsl(0,0%,90%)] transition-colors duration-300"
       />`;
 
   languageBtn.addEventListener("click", () => {
