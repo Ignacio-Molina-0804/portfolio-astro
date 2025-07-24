@@ -61,9 +61,9 @@ export const labels = {
         'experience.item.title': 'Sitio Web para Empresa de Montañismo',
         'experience.item.description':'Desarrollo de una aplicación web moderna, adaptable y profesional para una empresa dedicada al montañismo y actividades de aventura. El proyecto incluye secciones informativas, galería de imágenes, agenda de salidas y un canal de contacto. Programado con Astro, JavaScript, TypeScript y Tailwind CSS.',
 
-        'experience.item.date2' : 'Junio 2025 - Presente',
-        'experience.item.title2': 'Sitio Web para Empresa de Montañismo',
-        'experience.item.description2':'Desarrollo de una aplicación web moderna, adaptable y profesional para una empresa dedicada al montañismo y actividades de aventura. El proyecto incluye secciones informativas, galería de imágenes, agenda de salidas y un canal de contacto. Programado con Astro, JavaScript, TypeScript y Tailwind CSS.',
+        'experience.item.date2' : 'Próximo destino profesional',
+        'experience.item.title2': 'En búsqueda de experiencia en empresa',
+        'experience.item.description2':'¿Quieres ser el siguiente en mi lista de proyectos destacados? Estoy buscando oportunidades para aplicar mis habilidades y crecer junto a un equipo sólido.',
 
     },
     en: {
@@ -75,7 +75,7 @@ export const labels = {
         'header.aboutme': 'About Me',
         'header.skills': 'Skills',
         'header.contact': 'Contact',
-        
+
 
         // Meta Tags
         'page.title': 'Portfolio Ignacio Molina',
@@ -112,9 +112,9 @@ export const labels = {
         'experience.item.title': 'Website for Mountaineering Company',
         'experience.item.description':'Development of a modern, adaptable, and professional web application for a company dedicated to mountaineering and adventure activities. The project includes informational sections, image gallery, outing schedule, and a contact channel. Programmed with Astro, JavaScript, TypeScript, and Tailwind CSS.',
 
-        'experience.item.date2' : 'June 2025 - Present',
-        'experience.item.title2': 'Website for Mountaineering Company',
-        'experience.item.description2':'Development of a modern, adaptable, and professional web application for a company dedicated to mountaineering and adventure activities. The project includes informational sections, image gallery, outing schedule, and a contact channel. Programmed with Astro, JavaScript, TypeScript, and Tailwind CSS.',
+        'experience.item.date2' : 'Next professional destination',
+        'experience.item.title2': 'Seeking experience in a company',
+        'experience.item.description2':'Want to be the next in my list of featured projects? I am looking for opportunities to apply my skills and grow alongside a solid team.',
 
 
     }
