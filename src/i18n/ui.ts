@@ -8,6 +8,14 @@ export const languageList = {
 export const labels = {
     es: {
 
+        // Header
+        'header.home': 'Inicio',
+        'header.experience': 'Experiencia',
+        'header.projects': 'Proyectos',
+        'header.aboutme': 'Sobre Mí',
+        'header.skills': 'Conocimientos',
+        'header.contact': 'Contacto',
+
         // Meta Tags
         'page.title': 'Portfolio Ignacio Molina',
         'page.description': "Desarrollador Web (Astro/HTML/CSS/TailWind/JavaScript/TypeScript) y Back-End en Java Spring Boot | Conocimientos en JPA, APIs REST y MySQL | Autodidacta con proyectos prácticos | Portfolio técnico",
@@ -59,6 +67,15 @@ export const labels = {
 
     },
     en: {
+
+        // Header
+        'header.home': 'Home',
+        'header.experience': 'Experience',
+        'header.projects': 'Projects',
+        'header.aboutme': 'About Me',
+        'header.skills': 'Skills',
+        'header.contact': 'Contact',
+        
 
         // Meta Tags
         'page.title': 'Portfolio Ignacio Molina',

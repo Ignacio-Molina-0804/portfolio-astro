@@ -2,6 +2,12 @@
 import SolIcon from "./icons/Sol.astro";
 import LunaIcon from "./icons/Luna.astro";
 import InstallIcon from "./icons/Install.astro";
+
+import { useTranslations } from "../i18n/util";
+import { languageList } from "../i18n/ui";
+
+const currentLang = Astro.currentLocale || "es";
+const t = useTranslations(currentLang as keyof typeof languageList);
 ---
 
 <header
@@ -35,27 +41,27 @@ import InstallIcon from "./icons/Install.astro";
         <div class="px-2 py-2 space-y-1">
           <a
             class="block px-3 py-2 text-white hover:bg-gray-600 rounded-md text-sm"
-            href="#top">Inicio</a
+            href="#top">{t('header.home')}</a
           >
           <a
             class="block px-3 py-2 text-white hover:bg-gray-600 rounded-md text-sm"
-            href="#experiencia">Experiencia</a
+            href="#experiencia">{t('header.experience')}</a
           >
           <a
             class="block px-3 py-2 text-white hover:bg-gray-600 rounded-md text-sm"
-            href="#proyectos">Proyectos</a
+            href="#proyectos">{t('header.projects')}</a
           >
           <a
             class="block px-3 py-2 text-white hover:bg-gray-600 rounded-md text-sm"
-            href="#sobre-mi">Sobre Mi</a
+            href="#sobre-mi">{t('header.aboutme')}</a
           >
           <a
             class="block px-3 py-2 text-white hover:bg-gray-600 rounded-md text-sm"
-            href="#conocimientos">Conocimientos</a
+            href="#conocimientos">{t('header.skills')}</a
           >
           <a
             class="block px-3 py-2 text-white hover:bg-gray-600 rounded-md text-sm"
-            href="#contacto">Contacto</a
+            href="#contacto">{t('header.contact')}</a
           >
           <a
             class="px-3 py-2 text-amber-400 hover:bg-amber-400/10 rounded-md text-sm border border-amber-400 flex items-center gap-2"
@@ -73,27 +79,27 @@ import InstallIcon from "./icons/Install.astro";
     <nav class="hidden md:flex flex-row items-center gap-x-6 lg:gap-x-8">
       <a
         class="text-white hover:text-blue-200 transition-colors duration-200 text-sm lg:text-base"
-        href="#top">Inicio</a
+        href="#top">{t('header.home')}</a
       >
       <a
         class="text-white hover:text-blue-200 transition-colors duration-200 text-sm lg:text-base"
-        href="#experiencia">Experiencia</a
+        href="#experiencia">{t('header.experience')}</a
       >
       <a
         class="text-white hover:text-blue-200 transition-colors duration-200 text-sm lg:text-base"
-        href="#proyectos">Proyectos</a
+        href="#proyectos">{t('header.projects')}</a
       >
       <a
         class="text-white hover:text-blue-200 transition-colors duration-200 text-sm lg:text-base"
-        href="#sobre-mi">Sobre Mi</a
+        href="#sobre-mi">{t('header.aboutme')}</a
       >
       <a
         class="text-white hover:text-blue-200 transition-colors duration-200 text-sm lg:text-base"
-        href="#conocimientos">Conocimientos</a
+        href="#conocimientos">{t('header.skills')}</a
       >
       <a
         class="text-white hover:text-blue-200 transition-colors duration-200 text-sm lg:text-base"
-        href="#contacto">Contacto</a
+        href="#contacto">{t('header.contact')}</a
       >
       <a
         href="/cv.pdf"
