@@ -81,6 +81,50 @@ export const labels = {
         'projects.title.itemx':'',
         'projects.description.itemx':'',
 
+        //Sobre Mi
+
+        'aboutme.title': 'Sobre Mí',
+        'aboutme.content':
+        `
+        <p class="text-gray-700 dark:text-gray-300 mb-6">
+          <span class="text-blue-600 dark:text-blue-400 font-semibold">
+            Soy Ignacio, aunque muchos me conocen como Nacho o Molina.
+          </span>
+          Empecé a programar por curiosidad en la secundaria y desde entonces me
+          apasiona entender cómo funcionan las cosas y crear soluciones útiles.
+          <span class="text-green-600 font-semibold dark:text-green-400">
+            Me gusta aprender de forma autodidacta, explorar tecnologías nuevas
+            y meter mano hasta resolver lo que me propongo.
+          </span>
+          Actualmente estoy finalizando la <span
+            class="text-yellow-700 font-semibold dark:text-yellow-300"
+          >
+            Tecnicatura Universitaria en Programación
+          </span> en la UTN, y estoy abierto a sumarme a un equipo o trabajar de
+          forma freelance.
+        </p>
+
+        <p class="text-gray-700 dark:text-gray-300 mb-6">
+          <span class="text-blue-600 font-semibold dark:text-blue-400">
+            Soy responsable, curioso y disfruto trabajar en equipo.
+          </span>
+          Si algo no lo sé, lo investigo, lo pruebo y lo aprendo en el camino. Creo
+          en los desafíos como una oportunidad para crecer.
+        </p>
+
+        <p class="text-gray-700 dark:text-gray-300 mb-8">
+          Mi primer acercamiento a la programación fue en el <span
+            class="text-cyan-800 font-semibold dark:text-cyan-400"
+          >
+            Colegio Tomás Edison
+          </span>, donde me gradué como <span
+            class="text-orange-600 font-semibold dark:text-orange-300"
+          >
+            Bachiller en Informática con mención en Robótica y Programación
+          </span>. Esa etapa fue clave para despertar mi interés por el
+          desarrollo y la tecnología.
+        </p>`
+
     },
     en: {
 
@@ -140,11 +184,55 @@ export const labels = {
 
         'projects.title.item2': 'El Buen Sabor Front-End',
         'projects.description.item2': 'Front End development of a web application for a restaurant. This project features a modern and responsive design that ensures an optimal user experience across different devices. It includes functionalities such as an interactive menu, address management system, and an administration page. The implementation was carried out using advanced technologies like React, Redux Toolkit, TypeScript, and Tailwind CSS, among other tools detailed in the repository.',
-        
+
         'projects.title.item3':'El Buen Sabor Back-End',
         'projects.description.item3':'Back End development of a web application for a restaurant. This component of the project is focused on ensuring the robustness, scalability, and security of the system, providing an efficient and well-structured API to support key functionalities such as menu management, address control, and general administration. The implementation was done using high-performance and industry-recognized technologies such as Java, Spring Boot, JPA, and PostgreSQL, along with other complementary tools detailed in the repository.',
 
+        //In case I create another one
+        'projects.title.itemx':'',
+        'projects.description.itemx':'',
 
+        //About Me
+        'aboutme.title': 'About Me',
+        'aboutme.content': 
+            `<p class="text-gray-700 dark:text-gray-300 mb-6">
+                <span class="text-blue-600 dark:text-blue-400 font-semibold">
+                I'm Ignacio, although many know me as Nacho or Molina.
+                </span>
+                I started programming out of curiosity in high school, and since then
+                I've been passionate about understanding how things work and creating useful solutions.
+                <span class="text-green-600 font-semibold dark:text-green-400">
+                I enjoy learning on my own, exploring new technologies,
+                and getting hands-on until I solve what I set out to do.
+                </span>
+                I'm currently finishing the <span
+                class="text-yellow-700 font-semibold dark:text-yellow-300"
+                >
+                University Technician in Programming
+                </span> at UTN, and I'm open to joining a team or working freelance.
+            </p>
+
+            <p class="text-gray-700 dark:text-gray-300 mb-6">
+                <span class="text-blue-600 font-semibold dark:text-blue-400">
+                I'm responsible, curious, and enjoy working in a team.
+                </span>
+                If I don’t know something, I research it, test it, and learn it along the way.
+                I believe challenges are an opportunity to grow.
+            </p>
+
+            <p class="text-gray-700 dark:text-gray-300 mb-8">
+                My first approach to programming was at <span
+                class="text-cyan-800 font-semibold dark:text-cyan-400"
+                >
+                Tomás Alva Edison School
+                </span>, where I graduated as a <span
+                class="text-orange-600 font-semibold dark:text-orange-300"
+                >
+                High School Graduate in IT with a focus on Robotics and Programming
+                </span>. That stage was key in awakening my interest in development and technology.
+            </p>`,
+
+        
 
 
     }

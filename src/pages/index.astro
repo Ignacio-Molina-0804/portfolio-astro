@@ -99,49 +99,14 @@ const t = useTranslations(currentLang as keyof typeof languageList);
       </SectionContainer>
 
       <SectionContainer id="sobre-mi">
+
         <h2
           class="text-gray-800 dark:text-white text-2xl font-semibold mb-6 flex gap-x-3 items-center"
         >
-          <PersonIcon class="text-gray-800 dark:text-white size-7" /> Sobre Mi
+          <PersonIcon class="text-gray-800 dark:text-white size-7" /> {t("aboutme.title")}
         </h2>
-        <p class="text-gray-700 dark:text-gray-300 mb-6">
-          <span class="text-blue-600 dark:text-blue-400 font-semibold">
-            Soy Ignacio, aunque muchos me conocen como Nacho o Molina.
-          </span>
-          Empecé a programar por curiosidad en la secundaria y desde entonces me
-          apasiona entender cómo funcionan las cosas y crear soluciones útiles.
-          <span class="text-green-600 font-semibold dark:text-green-400">
-            Me gusta aprender de forma autodidacta, explorar tecnologías nuevas
-            y meter mano hasta resolver lo que me propongo.
-          </span>
-          Actualmente estoy finalizando la <span
-            class="text-yellow-700 font-semibold dark:text-yellow-300"
-          >
-            Tecnicatura Universitaria en Programación
-          </span> en la UTN, y estoy abierto a sumarme a un equipo o trabajar de
-          forma freelance.
-        </p>
 
-        <p class="text-gray-700 dark:text-gray-300 mb-6">
-          <span class="text-blue-600 font-semibold dark:text-blue-400">
-            Soy responsable, curioso y disfruto trabajar en equipo.
-          </span>
-          Si algo no lo sé, lo investigo, lo pruebo y lo aprendo en el camino. Creo
-          en los desafíos como una oportunidad para crecer.
-        </p>
-
-        <p class="text-gray-700 dark:text-gray-300 mb-8">
-          Mi primer acercamiento a la programación fue en el <span
-            class="text-cyan-800 font-semibold dark:text-cyan-400"
-          >
-            Colegio Tomás Edison
-          </span>, donde me gradué como <span
-            class="text-orange-600 font-semibold dark:text-orange-300"
-          >
-            Bachiller en Informática con mención en Robótica y Programación
-          </span>. Esa etapa fue clave para despertar mi interés por el
-          desarrollo y la tecnología.
-        </p>
+        <div set:html={t('aboutme.content')}></div>
 
         <Separator />
       </SectionContainer>
