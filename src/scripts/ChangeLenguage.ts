@@ -23,10 +23,13 @@ if (languageBtn && languageLabel) {
       />`;
 
   languageBtn.addEventListener("click", () => {
-    const newPath: string = isEnglish
-      ? currentPath.replace(/^\/en/, "") || "/"
-      : "/en" + currentPath;
-
+    // Forzar la navegación a la raíz del idioma correspondiente
+    const newPath: string = isEnglish ? "/" : "/en";
+    
+    // Usar replaceState para eliminar cualquier fragmento del historial
+    window.history.replaceState({}, "", window.location.pathname);
+    
+    // Redirigir a la nueva ruta
     window.location.pathname = newPath;
   });
 }
