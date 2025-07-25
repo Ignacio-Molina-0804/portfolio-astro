@@ -65,6 +65,22 @@ export const labels = {
         'experience.item.title2': 'En búsqueda de experiencia en empresa',
         'experience.item.description2':'¿Quieres ser el siguiente en mi lista de proyectos destacados? Estoy buscando oportunidades para aplicar mis habilidades y crecer junto a un equipo sólido.',
 
+        //Proyectos
+        'projects.title': 'Proyectos',
+
+        'projects.title.item1': 'Página Web de Montañismo',
+        'projects.description.item1': 'Este repositorio contiene el código fuente de la aplicación. Si bien no corresponde exactamente con la versión actualmente desplegada en el sitio del cliente, se encuentra disponible con fines demostrativos. Su objetivo es mostrar la estructura, organización y lógica utilizada durante el desarrollo del proyecto.',
+
+        'projects.title.item2': 'El Buen Sabor Front-End',
+        'projects.description.item2': 'Desarrollo Front End de una aplicación web para un restaurante. Este proyecto contempla un diseño moderno y responsivo que garantiza una experiencia de usuario óptima en distintos dispositivos. Incluye funcionalidades como un menú interactivo, un sistema de gestión de direcciones y una página de administración. La implementación se llevó a cabo utilizando tecnologías avanzadas como React, Redux Toolkit, TypeScript y Tailwind CSS, entre otras herramientas detalladas en el repositorio.',
+        
+        'projects.title.item3':'El Buen Sabor Back-End',
+        'projects.description.item3':'Desarrollo Back End de una aplicación web para un restaurante. Este componente del proyecto está orientado a garantizar la robustez, escalabilidad y seguridad del sistema, proporcionando una API eficiente y bien estructurada para soportar funcionalidades clave como la gestión del menú, el control de direcciones y la administración general. La implementación se realizó utilizando tecnologías de alto rendimiento y reconocimiento en la industria, tales como Java, Spring Boot, JPA y PostgreSQL, además de otras herramientas complementarias que se encuentran detalladas en el repositorio.',
+
+        //Por si en algun momento creo otro
+        'projects.title.itemx':'',
+        'projects.description.itemx':'',
+
     },
     en: {
 
@@ -115,6 +131,20 @@ export const labels = {
         'experience.item.date2' : 'Next professional destination',
         'experience.item.title2': 'Seeking experience in a company',
         'experience.item.description2':'Want to be the next in my list of featured projects? I am looking for opportunities to apply my skills and grow alongside a solid team.',
+
+        //Projects
+        'projects.title': 'Projects',
+
+        'projects.title.item1': 'Mountaineering Website',
+        'projects.description.item1': 'This repository contains the source code of the application. While it does not exactly match the version currently deployed on the client\'s site, it is available for demonstration purposes. Its goal is to showcase the structure, organization, and logic used during the project development.',
+
+        'projects.title.item2': 'El Buen Sabor Front-End',
+        'projects.description.item2': 'Front End development of a web application for a restaurant. This project features a modern and responsive design that ensures an optimal user experience across different devices. It includes functionalities such as an interactive menu, address management system, and an administration page. The implementation was carried out using advanced technologies like React, Redux Toolkit, TypeScript, and Tailwind CSS, among other tools detailed in the repository.',
+        
+        'projects.title.item3':'El Buen Sabor Back-End',
+        'projects.description.item3':'Back End development of a web application for a restaurant. This component of the project is focused on ensuring the robustness, scalability, and security of the system, providing an efficient and well-structured API to support key functionalities such as menu management, address control, and general administration. The implementation was done using high-performance and industry-recognized technologies such as Java, Spring Boot, JPA, and PostgreSQL, along with other complementary tools detailed in the repository.',
+
+
 
 
     }

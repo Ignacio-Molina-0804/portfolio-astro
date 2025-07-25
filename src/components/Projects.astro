@@ -14,11 +14,17 @@ import JavaIcon from "./icons/Java.astro";
 import SpringIcon from "./icons/SpringBoot.astro";
 import PostgresIcon from "./icons/Postgres.astro";
 
+import { useTranslations } from "../i18n/util";
+import { languageList } from "../i18n/ui";
+
+const currentLang = Astro.currentLocale || "es";
+const t = useTranslations(currentLang as keyof typeof languageList);
+
 const PROJECTS = [
   {
-    title: "Página Web de Montañismo",
+    title: t('projects.title.item1'),
     description:
-      "Este repositorio contiene el código fuente de la aplicación. Si bien no corresponde exactamente con la versión actualmente desplegada en el sitio del cliente, se encuentra disponible con fines demostrativos. Su objetivo es mostrar la estructura, organización y lógica utilizada durante el desarrollo del proyecto.",
+      t('projects.description.item1'),
     image: "/data/ProjectAconcagua.webp",
     techIcons: [
       { icon: AstroIcon, href: "https://astro.build", class: "hover:bg-orange-800" },
@@ -34,9 +40,9 @@ const PROJECTS = [
   },
 
   {
-    title: "El Buen Sabor Front-End",
+    title: t('projects.title.item2'),
     description:
-      "Desarrollo Front End de una aplicación web para un restaurante. Este proyecto contempla un diseño moderno y responsivo que garantiza una experiencia de usuario óptima en distintos dispositivos. Incluye funcionalidades como un menú interactivo, un sistema de gestión de direcciones y una página de administración. La implementación se llevó a cabo utilizando tecnologías avanzadas como React, Redux Toolkit, TypeScript y Tailwind CSS, entre otras herramientas detalladas en el repositorio.",
+      t('projects.description.item2'),
     image: "/data/ProjectFrontEndBuenSabor.webp",
     techIcons: [
       { icon: ReactIcon, href: "https://react.dev", class: "hover:bg-sky-600" },
@@ -51,9 +57,9 @@ const PROJECTS = [
     showLine: true  
   },
   {
-    title: "El Buen Sabor Back-End",
+    title: t('projects.title.item3'),
     description:
-      "Desarrollo Back End de una aplicación web para un restaurante. Este componente del proyecto está orientado a garantizar la robustez, escalabilidad y seguridad del sistema, proporcionando una API eficiente y bien estructurada para soportar funcionalidades clave como la gestión del menú, el control de direcciones y la administración general. La implementación se realizó utilizando tecnologías de alto rendimiento y reconocimiento en la industria, tales como Java, Spring Boot, JPA y PostgreSQL, además de otras herramientas complementarias que se encuentran detalladas en el repositorio.",
+      t('projects.description.item3'),
     image: "/data/ProjectBackEndBuenSabor.webp",
     techIcons: [
        { icon: JavaIcon, href: "https://www.oracle.com/java/", class: "hover:bg-red-700", line: Line },
