@@ -41,8 +41,7 @@ const t = useTranslations(currentLang as keyof typeof languageList);
 
           <!-- Contenido de texto -->
           <div class="text-center md:text-left max-w-2xl">
-            
-            <div set:html={t('top.content')}></div>
+            <div set:html={t("top.content")} />
 
             <!-- Redes sociales (sin cambios como solicitaste) -->
             <nav
@@ -81,7 +80,7 @@ const t = useTranslations(currentLang as keyof typeof languageList);
         <h2
           class="text-gray-800 dark:text-white text-2xl font-semibold mb-6 flex gap-x-3 items-center"
         >
-          <BriefCase class="text-gray-800 dark:text-white size-7" /> 
+          <BriefCase class="text-gray-800 dark:text-white size-7" />
           {t("experience.title")}
         </h2>
         <Experience />
@@ -92,21 +91,22 @@ const t = useTranslations(currentLang as keyof typeof languageList);
         <h2
           class="text-gray-800 dark:text-white text-2xl font-semibold mb-6 flex gap-x-3 items-center"
         >
-          <ComputerIcon class="text-gray-800 dark:text-white size-7" /> {t("projects.title")}
+          <ComputerIcon class="text-gray-800 dark:text-white size-7" />
+          {t("projects.title")}
         </h2>
         <Projects />
         <Separator />
       </SectionContainer>
 
       <SectionContainer id="sobre-mi">
-
         <h2
           class="text-gray-800 dark:text-white text-2xl font-semibold mb-6 flex gap-x-3 items-center"
         >
-          <PersonIcon class="text-gray-800 dark:text-white size-7" /> {t("aboutme.title")}
+          <PersonIcon class="text-gray-800 dark:text-white size-7" />
+          {t("aboutme.title")}
         </h2>
 
-        <div set:html={t('aboutme.content')}></div>
+        <div set:html={t("aboutme.content")} />
 
         <Separator />
       </SectionContainer>
@@ -115,7 +115,8 @@ const t = useTranslations(currentLang as keyof typeof languageList);
         <h2
           class="text-gray-800 dark:text-white text-2xl font-semibold mb-2 flex gap-x-3 items-center"
         >
-          <CodeIcon class="text-gray-800 dark:text-white size-7" /> {t("skills.title")}
+          <CodeIcon class="text-gray-800 dark:text-white size-7" />
+          {t("skills.title")}
         </h2>
         <SkillsCard />
         <Separator />
@@ -125,16 +126,11 @@ const t = useTranslations(currentLang as keyof typeof languageList);
         <h2
           class="text-gray-800 dark:text-white text-3xl font-bold mb-8 flex justify-center gap-x-3 items-center"
         >
-          <EnvelopeIcon class="text-gray-800 dark:text-white size-8" /> Contacto
+          <EnvelopeIcon class="text-gray-800 dark:text-white size-8" /> {t("contact.title")}
           <EnvelopeIcon class="text-gray-800 dark:text-white size-8" />
         </h2>
 
-        <p
-          class="text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mb-10 text-lg"
-        >
-          ¿Tienes un proyecto en mente o quieres colaborar?<br />
-          ¡Escríbeme y hablemos sobre cómo puedo ayudarte!
-        </p>
+        <div set:html={t("contact.content")} />
 
         <!-- Contenedor de botones de contacto -->
         <div class="flex flex-wrap justify-center gap-6 mb-12">
@@ -170,6 +166,6 @@ const t = useTranslations(currentLang as keyof typeof languageList);
       </SectionContainer>
     </SectionContainer>
 
-    <Footer/>
+    <Footer />
   </main>
 </Layout>

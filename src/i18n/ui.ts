@@ -128,6 +128,16 @@ export const labels = {
         //Skills
         'skills.title': 'Mis conocimientos',
 
+        //Contact
+        'contact.title': 'Contáctame',
+        'contact.content':
+        `<p
+          class="text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mb-10 text-lg"
+        >
+          ¿Tienes un proyecto en mente o quieres colaborar?<br />
+          ¡Escríbeme y hablemos sobre cómo puedo ayudarte!
+        </p>`
+
     },
     en: {
 
@@ -237,6 +247,17 @@ export const labels = {
 
         //Skills
         'skills.title': 'My Skills',
+
+        //Contact 
+        'contact.title': 'Contact Me',
+        'contact.content':
+            `<p
+                class="text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mb-10 text-lg"
+            >
+                Do you have a project in mind or want to collaborate?<br />
+                Write to me and let’s talk about how I can help you!
+            </p>`
+        
 
         
 
