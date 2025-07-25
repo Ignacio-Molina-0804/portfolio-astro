@@ -123,7 +123,10 @@ export const labels = {
             Bachiller en Informática con mención en Robótica y Programación
           </span>. Esa etapa fue clave para despertar mi interés por el
           desarrollo y la tecnología.
-        </p>`
+        </p>`,
+
+        //Skills
+        'skills.title': 'Mis conocimientos',
 
     },
     en: {
@@ -231,6 +234,11 @@ export const labels = {
                 High School Graduate in IT with a focus on Robotics and Programming
                 </span>. That stage was key in awakening my interest in development and technology.
             </p>`,
+
+        //Skills
+        'skills.title': 'My Skills',
+
+        
 
         
 
