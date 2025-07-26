@@ -89,12 +89,10 @@ const { title = t("page.title"), description = t("page.description") } =
     transition: background-color 0.5s ease;
   }
 
-  /* Transición para los elementos de fondo */
   .fixed.inset-0.z-[-1] {
     transition: opacity 0.5s ease;
   }
 
-  /* Asegurar que los elementos de texto también tengan transición */
   a,
   p,
   h1,
@@ -104,18 +102,17 @@ const { title = t("page.title"), description = t("page.description") } =
   h5,
   h6,
   span {
-    transition: color 0.3s ease;
+    transition: color 0.5s ease;
   }
 
-  /* Transición para los botones y elementos interactivos */
   button,
   .bg-gray-500,
   .bg-black,
   .bg-gray-700,
   .bg-gray-600 {
     transition:
-      background-color 0.3s ease,
-      border-color 0.3s ease;
+      background-color 0.5s ease,
+      border-color 0.5s ease;
   }
 
   @media (prefers-reduced-motion: reduce) {
