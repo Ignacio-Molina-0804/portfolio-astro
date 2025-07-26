@@ -13,47 +13,51 @@ interface Props {
   description: string;
 }
 
-const { title = t('page.title'),  description = t('page.description')} = Astro.props;
+const { title = t("page.title"), description = t("page.description") } =
+  Astro.props;
 ---
 
 <!doctype html>
 <html lang={currentLang} class="h-full">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" />
-  <meta name="description" content={description} />
-  <meta name="robots" content="index, follow" />
-  <meta name="author" content="Ignacio Molina" />
-  <link rel="canonical" href="https://portfolio-ignacio-molina.netlify.app" />
-  <meta name="generator" content={Astro.generator} />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Ignacio Molina" />
+    <link rel="canonical" href="https://portfolio-ignacio-molina.netlify.app" />
+    <meta name="generator" content={Astro.generator} />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content={title} />
-  <meta property="og:description" content={description} />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://portfolio-ignacio-molina.netlify.app" />
-  <meta property="og:image" content="public/data/og&twitter-image.jpg" />
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://portfolio-ignacio-molina.netlify.app"
+    />
+    <meta property="og:image" content="public/data/og&twitter-image.jpg" />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content={title} />
-  <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content="public/data/og&twitter-image.jpg" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="public/data/og&twitter-image.jpg" />
 
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <title>{title}</title>
-</head>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
 
   <body class="px-4">
     <!-- Fondo para modo claro -->
-    <div class="fixed inset-0 z-[-1] w-full h-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem] dark:hidden"></div>
+    <div
+      class="fixed inset-0 z-[-1] w-full h-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem] opacity-100 dark:opacity-0 transition-opacity duration-500"
+    >
+    </div>
 
     <!-- Fondo para modo oscuro -->
     <div
-      class="fixed inset-0 z-[-1] w-full h-full
-         bg-neutral-950
-         bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]
-         hidden dark:block"
+      class="fixed inset-0 z-[-1] w-full h-full bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))] opacity-0 dark:opacity-100 transition-opacity duration-500"
     >
     </div>
 
@@ -71,6 +75,9 @@ const { title = t('page.title'),  description = t('page.description')} = Astro.p
     font-family: "Barlow", sans-serif;
     scroll-behavior: smooth;
     scroll-padding: 6rem;
+    transition:
+      background-color 0.5s ease,
+      color 0.5s ease;
   }
 
   body {
@@ -79,6 +86,36 @@ const { title = t('page.title'),  description = t('page.description')} = Astro.p
     flex-direction: column;
     justify-content: center;
     min-height: 100vh;
+    transition: background-color 0.5s ease;
+  }
+
+  /* Transición para los elementos de fondo */
+  .fixed.inset-0.z-[-1] {
+    transition: opacity 0.5s ease;
+  }
+
+  /* Asegurar que los elementos de texto también tengan transición */
+  a,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  span {
+    transition: color 0.3s ease;
+  }
+
+  /* Transición para los botones y elementos interactivos */
+  button,
+  .bg-gray-500,
+  .bg-black,
+  .bg-gray-700,
+  .bg-gray-600 {
+    transition:
+      background-color 0.3s ease,
+      border-color 0.3s ease;
   }
 
   @media (prefers-reduced-motion: reduce) {
