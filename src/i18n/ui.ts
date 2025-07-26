@@ -136,7 +136,22 @@ export const labels = {
         >
           ¿Tienes un proyecto en mente o quieres colaborar?<br />
           ¡Escríbeme y hablemos sobre cómo puedo ayudarte!
-        </p>`
+        </p>`,
+
+        //Footer
+
+        'footer.content':
+           `<div class="mt-auto w-full max-w-screen-xl mx-auto px-4 py-6 text-center text-yellow-200/85 text-sm">
+            Hecho en <strong>Astro</strong> por 
+            <a
+              href="https://github.com/Ignacio-Molina-0804"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:underline hover:text-yellow-300 transition-colors duration-200"
+            >
+              Ignacio Molina
+            </a>.
+          </div>`
 
     },
     en: {
@@ -256,14 +271,23 @@ export const labels = {
             >
                 Do you have a project in mind or want to collaborate?<br />
                 Write to me and let’s talk about how I can help you!
-            </p>`
-        
+            </p>`,
 
-        
+        //Footer
 
-        
-
-
+        'footer.content':
+          `<div class="mt-auto w-full max-w-screen-xl mx-auto px-4 py-6 text-center text-yellow-200/85 text-sm">
+            Made with <strong>Astro</strong> by 
+            <a
+              href="https://github.com/Ignacio-Molina-0804"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:underline hover:text-yellow-300 transition-colors duration-200"
+            >
+              Ignacio Molina
+            </a>.
+          </div>`,
+          
     }
 
 };
