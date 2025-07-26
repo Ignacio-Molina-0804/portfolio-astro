@@ -1,14 +1,13 @@
 ---
-
-  const {class: className, href} = Astro.props
-
+const { class: className, href, ariaLabel } = Astro.props;
 ---
 
 <a
   target="_blank"
   rel="noopener noreferrer"
-  class={`Xbg-blue-100 ${className} text-xs font-semibold m-1 px-2 py-1 lg:px-4 lg:py-2 rounded-xl bg-gray-700 text-gray-200 border border-gray-950/50   dark:border-gray-100  inline-flex items-center justify-center`}
+  class={`Xbg-blue-100 ${className} text-xs font-semibold m-1 px-2 py-1 lg:px-4 lg:py-2 rounded-xl bg-gray-700 text-gray-200 border border-gray-950/50 dark:border-gray-100 inline-flex items-center justify-center`}
   href={href}
+  aria-label={ariaLabel}
 >
   <slot />
 </a>

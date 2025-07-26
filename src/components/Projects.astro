@@ -23,55 +23,50 @@ const t = useTranslations(currentLang as keyof typeof languageList);
 const PROJECTS = [
   {
     title: t('projects.title.item1'),
-    description:
-      t('projects.description.item1'),
+    description: t('projects.description.item1'),
     image: "/data/ProjectAconcagua.webp",
     techIcons: [
-      { icon: AstroIcon, href: "https://astro.build", class: "hover:bg-orange-800" },
-      { icon: JavaScriptIcon, href: "https://www.javascript.com/", class: "hover:bg-yellow-600" },
-      { icon: TypeScriptIcon, href: "https://www.typescriptlang.org/", class: "hover:bg-blue-800" },
-      { icon: TailwindIcon, href: "https://tailwindcss.com/", class: "hover:bg-blue-400" },
+      { icon: AstroIcon, href: "https://astro.build", class: "hover:bg-orange-800", ariaLabel: "Sitio oficial de Astro" },
+      { icon: JavaScriptIcon, href: "https://www.javascript.com/", class: "hover:bg-yellow-600", ariaLabel: "Sitio oficial de JavaScript" },
+      { icon: TypeScriptIcon, href: "https://www.typescriptlang.org/", class: "hover:bg-blue-800", ariaLabel: "Sitio oficial de TypeScript" },
+      { icon: TailwindIcon, href: "https://tailwindcss.com/", class: "hover:bg-blue-400", ariaLabel: "Sitio oficial de Tailwind CSS" },
     ],
     repoIcons: [
-      { icon: GithubIcon, href: "https://github.com/Ignacio-Molina-0804/PaginaAconcagua", class: "hover:bg-blue-800" },
-      { icon: EnterIcon, href: "https://gastonmolinaguide.netlify.app", class: "hover:bg-blue-800" },
+      { icon: GithubIcon, href: "https://github.com/Ignacio-Molina-0804/PaginaAconcagua", class: "hover:bg-blue-800", ariaLabel: "Repositorio en GitHub de Página Aconcagua" },
+      { icon: EnterIcon, href: "https://gastonmolinaguide.netlify.app", class: "hover:bg-blue-800", ariaLabel: "Sitio web de la guía Gastón Molina" },
     ],
     showLine: true  
   },
 
   {
     title: t('projects.title.item2'),
-    description:
-      t('projects.description.item2'),
+    description: t('projects.description.item2'),
     image: "/data/ProjectFrontEndBuenSabor.webp",
     techIcons: [
-      { icon: ReactIcon, href: "https://react.dev", class: "hover:bg-sky-600" },
-      { icon: ReduxIcon, href: "https://redux-toolkit.js.org/", class: "hover:bg-purple-800" },
-      { icon: TypeScriptIcon, href: "https://www.typescriptlang.org/", class: "hover:bg-blue-800" },
-      { icon: TailwindIcon, href: "https://tailwindcss.com/", class: "hover:bg-blue-400" },
+      { icon: ReactIcon, href: "https://react.dev", class: "hover:bg-sky-600", ariaLabel: "Sitio oficial de React" },
+      { icon: ReduxIcon, href: "https://redux-toolkit.js.org/", class: "hover:bg-purple-800", ariaLabel: "Sitio oficial de Redux Toolkit" },
+      { icon: TypeScriptIcon, href: "https://www.typescriptlang.org/", class: "hover:bg-blue-800", ariaLabel: "Sitio oficial de TypeScript" },
+      { icon: TailwindIcon, href: "https://tailwindcss.com/", class: "hover:bg-blue-400", ariaLabel: "Sitio oficial de Tailwind CSS" },
     ],
     repoIcons: [
-      { icon: GithubIcon, href: "https://github.com/Ignacio-Molina-0804/ElBuenSaborFrontReact", class: "hover:bg-blue-800" },
-    //   { icon: EnterIcon, href: "https://gastonmolinaguide.netlify.app", class: "hover:bg-blue-800" },
+      { icon: GithubIcon, href: "https://github.com/Ignacio-Molina-0804/ElBuenSaborFrontReact", class: "hover:bg-blue-800", ariaLabel: "Repositorio en GitHub del frontend de Buen Sabor" },
     ],
     showLine: true  
   },
+
   {
     title: t('projects.title.item3'),
-    description:
-      t('projects.description.item3'),
+    description: t('projects.description.item3'),
     image: "/data/ProjectBackEndBuenSabor.webp",
     techIcons: [
-       { icon: JavaIcon, href: "https://www.oracle.com/java/", class: "hover:bg-red-700", line: Line },
-       { icon: SpringIcon, href: "https://spring.io/projects/spring-boot", class: "hover:bg-green-700", line: Line },
-       { icon: PostgresIcon, href: "https://www.postgresql.org/", class: "hover:bg-blue-700" },
+      { icon: JavaIcon, href: "https://www.oracle.com/java/", class: "hover:bg-red-700", ariaLabel: "Sitio oficial de Java" },
+      { icon: SpringIcon, href: "https://spring.io/projects/spring-boot", class: "hover:bg-green-700", ariaLabel: "Sitio oficial de Spring Boot" },
+      { icon: PostgresIcon, href: "https://www.postgresql.org/", class: "hover:bg-blue-700", ariaLabel: "Sitio oficial de PostgreSQL" },
     ],
     repoIcons: [
-      { icon: GithubIcon, href: "https://github.com/Ignacio-Molina-0804/buensabor-backend", class: "hover:bg-blue-800" },
-    //   { icon: EnterIcon, href: "https://gastonmolinaguide.netlify.app", class: "hover:bg-blue-800" },
+      { icon: GithubIcon, href: "https://github.com/Ignacio-Molina-0804/buensabor-backend", class: "hover:bg-blue-800", ariaLabel: "Repositorio en GitHub del backend de Buen Sabor" },
     ],
     showLine: false
-
   }
 ];
 ---
@@ -81,23 +76,23 @@ const PROJECTS = [
     <div class="flex-1 sm:w-full justify-center py-4">
       <h3 class="text-gray-800 dark:text-white text-xl font-semibold mb-3 pb-2">{title}</h3>
       <p class="text-gray-800 dark:text-white text-sm mb-2 opacity-80 w-full text-pretty">{description}</p>
-    
-    <div class="flex justify-between w-full">
-      <div class="flex flex-row py-3 gap-2 sm:w-full flex-wrap">
-        {techIcons.map(({ icon: Icon, href, class: customClass }) => (
-          <SocialPill class={customClass} href={href}>
-            <Icon />
-          </SocialPill>
-        ))}
+
+      <div class="flex justify-between w-full">
+        <div class="flex flex-row py-3 gap-2 sm:w-full flex-wrap">
+          {techIcons.map(({ icon: Icon, href, class: customClass, ariaLabel }) => (
+            <SocialPill class={customClass} href={href} aria-label={ariaLabel}>
+              <Icon />
+            </SocialPill>
+          ))}
+        </div>
+        <div class="flex flex-row py-3 gap-2">
+          {repoIcons.map(({ icon: Icon, href, class: customClass, ariaLabel }) => (
+            <SocialPill class={customClass} href={href} aria-label={ariaLabel}>
+              <Icon />
+            </SocialPill>
+          ))}
+        </div>
       </div>
-      <div class="flex flex-row py-3 gap-2 ">
-        {repoIcons.map(({ icon: Icon, href, class: customClass }) => (
-          <SocialPill class={customClass} href={href}>
-            <Icon />
-          </SocialPill>
-        ))}
-      </div>
-    </div>
 
       <img
         class="w-full rounded-lg shadow-xl shadow-gray-800 mt-4"
