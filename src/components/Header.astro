@@ -8,6 +8,9 @@ import { languageList } from "../i18n/ui";
 
 const currentLang = Astro.currentLocale || "es";
 const t = useTranslations(currentLang as keyof typeof languageList);
+
+const cvFile = currentLang === 'es' ? 'CV_Ignacio_Molina_ES.pdf' : 'CV_Ignacio_Molina_EN.pdf';
+const cvDownloadName = currentLang === 'es' ? 'CV-Ignacio-Molina-Desarrollador.pdf' : 'CV-Ignacio-Molina-Developer.pdf';
 ---
 
 <header
@@ -44,7 +47,6 @@ const t = useTranslations(currentLang as keyof typeof languageList);
            max-h-0 overflow-hidden"
       >
         <div class="px-2 py-2 space-y-1">
-          <!-- Tus elementos del menú se mantienen igual -->
           <a
             class="block px-3 py-2 text-white hover:bg-gray-600 rounded-md text-sm"
             href="#top">{t("header.home")}</a
@@ -71,11 +73,11 @@ const t = useTranslations(currentLang as keyof typeof languageList);
           >
           <a
             class="px-3 py-2 text-amber-400 hover:bg-amber-400/10 rounded-md text-sm border border-amber-400 flex items-center gap-2"
-            href="/cv.pdf"
-            download="CV-Ignacio-Molina-Desarrollador.pdf"
+            href={`/${cvFile}`}
+            download={cvDownloadName}
           >
             <InstallIcon />
-            Descargar CV
+            CV
           </a>
         </div>
       </div>
@@ -108,8 +110,8 @@ const t = useTranslations(currentLang as keyof typeof languageList);
         href="#contacto">{t("header.contact")}</a
       >
       <a
-        href="/cv.pdf"
-        download="CV-Ignacio-Molina-Desarrollador.pdf"
+        href={`/${cvFile}`}
+        download={cvDownloadName}
         class="px-3 py-1.5 bg-transparent border border-amber-400 text-amber-400 hover:bg-amber-400/10 rounded-md transition-all duration-300 flex items-center gap-2 text-sm"
       >
         <InstallIcon />
