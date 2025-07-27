@@ -20,7 +20,7 @@ const t = useTranslations(currentLang as keyof typeof languageList);
     <div class="md:hidden relative">
       <button id="menu-toggle" class="p-2 text-white focus:outline-none">
         <svg
-          class="w-6 h-6"
+          class="w-6 h-6 transition-transform duration-300"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -33,35 +33,41 @@ const t = useTranslations(currentLang as keyof typeof languageList);
         </svg>
       </button>
 
-      <!-- Menú desplegable -->
+      <!-- Menú desplegable con transiciones -->
       <div
         id="mobile-menu"
-        class="hidden absolute left-0 mt-2 w-56 bg-gray-700 dark:bg-gray-800 rounded-md shadow-lg z-50"
+        class="absolute left-0 mt-2 w-56 bg-gray-700 dark:bg-gray-800 rounded-md shadow-lg z-50
+           transform opacity-0 scale-95
+           transition-all duration-300 ease-out
+           origin-top-left
+           pointer-events-none
+           max-h-0 overflow-hidden"
       >
         <div class="px-2 py-2 space-y-1">
+          <!-- Tus elementos del menú se mantienen igual -->
           <a
             class="block px-3 py-2 text-white hover:bg-gray-600 rounded-md text-sm"
-            href="#top">{t('header.home')}</a
+            href="#top">{t("header.home")}</a
           >
           <a
             class="block px-3 py-2 text-white hover:bg-gray-600 rounded-md text-sm"
-            href="#experiencia">{t('header.experience')}</a
+            href="#experiencia">{t("header.experience")}</a
           >
           <a
             class="block px-3 py-2 text-white hover:bg-gray-600 rounded-md text-sm"
-            href="#proyectos">{t('header.projects')}</a
+            href="#proyectos">{t("header.projects")}</a
           >
           <a
             class="block px-3 py-2 text-white hover:bg-gray-600 rounded-md text-sm"
-            href="#sobre-mi">{t('header.aboutme')}</a
+            href="#sobre-mi">{t("header.aboutme")}</a
           >
           <a
             class="block px-3 py-2 text-white hover:bg-gray-600 rounded-md text-sm"
-            href="#conocimientos">{t('header.skills')}</a
+            href="#conocimientos">{t("header.skills")}</a
           >
           <a
             class="block px-3 py-2 text-white hover:bg-gray-600 rounded-md text-sm"
-            href="#contacto">{t('header.contact')}</a
+            href="#contacto">{t("header.contact")}</a
           >
           <a
             class="px-3 py-2 text-amber-400 hover:bg-amber-400/10 rounded-md text-sm border border-amber-400 flex items-center gap-2"
@@ -79,27 +85,27 @@ const t = useTranslations(currentLang as keyof typeof languageList);
     <nav class="hidden md:flex flex-row items-center gap-x-6 lg:gap-x-8">
       <a
         class="text-white hover:text-blue-200 transition-colors duration-200 text-sm lg:text-base"
-        href="#top">{t('header.home')}</a
+        href="#top">{t("header.home")}</a
       >
       <a
         class="text-white hover:text-blue-200 transition-colors duration-200 text-sm lg:text-base"
-        href="#experiencia">{t('header.experience')}</a
+        href="#experiencia">{t("header.experience")}</a
       >
       <a
         class="text-white hover:text-blue-200 transition-colors duration-200 text-sm lg:text-base"
-        href="#proyectos">{t('header.projects')}</a
+        href="#proyectos">{t("header.projects")}</a
       >
       <a
         class="text-white hover:text-blue-200 transition-colors duration-200 text-sm lg:text-base"
-        href="#sobre-mi">{t('header.aboutme')}</a
+        href="#sobre-mi">{t("header.aboutme")}</a
       >
       <a
         class="text-white hover:text-blue-200 transition-colors duration-200 text-sm lg:text-base"
-        href="#conocimientos">{t('header.skills')}</a
+        href="#conocimientos">{t("header.skills")}</a
       >
       <a
         class="text-white hover:text-blue-200 transition-colors duration-200 text-sm lg:text-base"
-        href="#contacto">{t('header.contact')}</a
+        href="#contacto">{t("header.contact")}</a
       >
       <a
         href="/cv.pdf"
