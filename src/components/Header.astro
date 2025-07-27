@@ -9,8 +9,10 @@ import { languageList } from "../i18n/ui";
 const currentLang = Astro.currentLocale || "es";
 const t = useTranslations(currentLang as keyof typeof languageList);
 
-const cvFile = currentLang === 'es' ? 'CV_Ignacio_Molina_ES.pdf' : 'CV_Ignacio_Molina_EN.pdf';
-const cvDownloadName = currentLang === 'es' ? 'CV-Ignacio-Molina-Desarrollador.pdf' : 'CV-Ignacio-Molina-Developer.pdf';
+const cvUrl =
+  currentLang === "es"
+    ? "https://drive.google.com/file/d/1jQOJgi3wqZQf-wGPHSt5UZPVKRCZi4Et/view?usp=sharing"
+    : "https://drive.google.com/file/d/1S1tJsd6kIjFcMAD-KH8OmfPbKL1aMk5X/view?usp=sharing";
 ---
 
 <header
@@ -73,8 +75,9 @@ const cvDownloadName = currentLang === 'es' ? 'CV-Ignacio-Molina-Desarrollador.p
           >
           <a
             class="px-3 py-2 text-amber-400 hover:bg-amber-400/10 rounded-md text-sm border border-amber-400 flex items-center gap-2"
-            href={`/${cvFile}`}
-            download={cvDownloadName}
+            href={cvUrl}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <InstallIcon />
             CV
@@ -110,8 +113,9 @@ const cvDownloadName = currentLang === 'es' ? 'CV-Ignacio-Molina-Desarrollador.p
         href="#contacto">{t("header.contact")}</a
       >
       <a
-        href={`/${cvFile}`}
-        download={cvDownloadName}
+        href={cvUrl}
+        target="_blank"
+        rel="noopener noreferrer"
         class="px-3 py-1.5 bg-transparent border border-amber-400 text-amber-400 hover:bg-amber-400/10 rounded-md transition-all duration-300 flex items-center gap-2 text-sm"
       >
         <InstallIcon />
