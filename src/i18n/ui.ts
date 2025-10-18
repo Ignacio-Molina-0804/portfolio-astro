@@ -90,7 +90,7 @@ export const labels = {
         //Sobre Mi
 
         'aboutme.title': 'Sobre Mí',
-        'aboutme.content':
+        'aboutme.content': 
         `
         <p class="text-gray-700 dark:text-gray-300 mb-6">
           <span class="text-blue-600 dark:text-blue-400 font-semibold">
@@ -102,10 +102,10 @@ export const labels = {
             Me gusta aprender de forma autodidacta, explorar tecnologías nuevas
             y meter mano hasta resolver lo que me propongo.
           </span>
-          Actualmente estoy finalizando la <span
+          Me recibí como <span
             class="text-yellow-700 font-semibold dark:text-yellow-300"
           >
-            Tecnicatura Universitaria en Programación
+            Técnico Universitario en Programación
           </span> en la UTN, y estoy abierto a sumarme a un equipo o trabajar de
           forma freelance.
         </p>
@@ -245,7 +245,7 @@ export const labels = {
                 I enjoy learning on my own, exploring new technologies,
                 and getting hands-on until I solve what I set out to do.
                 </span>
-                I'm currently finishing the <span
+                I graduated as a <span
                 class="text-yellow-700 font-semibold dark:text-yellow-300"
                 >
                 University Technician in Programming
