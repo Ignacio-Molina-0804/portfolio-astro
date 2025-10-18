@@ -67,25 +67,53 @@ const PROJECTS = [
       { icon: GithubIcon, href: "https://github.com/Ignacio-Molina-0804/buensabor-backend", class: "hover:bg-blue-800", ariaLabel: "Repositorio en GitHub del backend de Buen Sabor" },
     ],
     showLine: false
+  },
+  {
+    title: t('projects.title.item4'),
+    description: t('projects.description.item4'),
+    image: "/data/ProjectBackEndBuenSabor.webp",
+    techIcons: [
+      { icon: JavaIcon, href: "https://www.oracle.com/java/", class: "hover:bg-red-700", ariaLabel: "Sitio oficial de Java" },
+      { icon: SpringIcon, href: "https://spring.io/projects/spring-boot", class: "hover:bg-green-700", ariaLabel: "Sitio oficial de Spring Boot" },
+      { icon: PostgresIcon, href: "https://www.postgresql.org/", class: "hover:bg-blue-700", ariaLabel: "Sitio oficial de PostgreSQL" },
+    ],
+    repoIcons: [
+      { icon: GithubIcon, href: "https://github.com/Ignacio-Molina-0804/buensabor-backend", class: "hover:bg-blue-800", ariaLabel: "Repositorio en GitHub del backend de Buen Sabor" },
+    ],
+    showLine: false
+  },
+  {
+    title: t('projects.title.item5'),
+    description: t('projects.description.item5'),
+    image: "/data/ProjectBackEndBuenSabor.webp",
+    techIcons: [
+      { icon: JavaIcon, href: "https://www.oracle.com/java/", class: "hover:bg-red-700", ariaLabel: "Sitio oficial de Java" },
+      { icon: SpringIcon, href: "https://spring.io/projects/spring-boot", class: "hover:bg-green-700", ariaLabel: "Sitio oficial de Spring Boot" },
+      { icon: PostgresIcon, href: "https://www.postgresql.org/", class: "hover:bg-blue-700", ariaLabel: "Sitio oficial de PostgreSQL" },
+    ],
+    repoIcons: [
+      { icon: GithubIcon, href: "https://github.com/Ignacio-Molina-0804/buensabor-backend", class: "hover:bg-blue-800", ariaLabel: "Repositorio en GitHub del backend de Buen Sabor" },
+    ],
+    showLine: false
   }
 ];
 ---
 
 {PROJECTS.map(({ title, description, image, techIcons, repoIcons, showLine }) => (
-  <article class="flex flex-col gap-8 w-full">
-    <div class="flex-1 sm:w-full justify-center py-4">
-      <h3 class="text-gray-800 dark:text-white text-xl font-semibold mb-3 pb-2">{title}</h3>
-      <p class="text-gray-800 dark:text-white text-sm mb-2 opacity-80 w-full text-pretty">{description}</p>
+  <article class="flex flex-col w-full gap-8">
+    <div class="justify-center flex-1 py-4 sm:w-full">
+      <h3 class="pb-2 mb-3 text-xl font-semibold text-gray-800 dark:text-white">{title}</h3>
+      <p class="w-full mb-2 text-sm text-gray-800 dark:text-white opacity-80 text-pretty">{description}</p>
 
       <div class="flex justify-between w-full">
-        <div class="flex flex-row py-3 gap-2 sm:w-full flex-wrap">
+        <div class="flex flex-row flex-wrap gap-2 py-3 sm:w-full">
           {techIcons.map(({ icon: Icon, href, class: customClass, ariaLabel }) => (
             <SocialPill class={customClass} href={href} aria-label={ariaLabel}>
               <Icon />
             </SocialPill>
           ))}
         </div>
-        <div class="flex flex-row py-3 gap-2">
+        <div class="flex flex-row gap-2 py-3">
           {repoIcons.map(({ icon: Icon, href, class: customClass, ariaLabel }) => (
             <SocialPill class={customClass} href={href} aria-label={ariaLabel}>
               <Icon />
@@ -95,7 +123,7 @@ const PROJECTS = [
       </div>
 
       <img
-        class="w-full rounded-lg shadow-xl shadow-gray-800 mt-4"
+        class="w-full mt-4 rounded-lg shadow-xl shadow-gray-800"
         src={image}
         alt={`Captura de ${title}`}
       />

@@ -77,6 +77,12 @@ export const labels = {
         'projects.title.item3':'El Buen Sabor Back-End',
         'projects.description.item3':'Desarrollo Back End de una aplicación web para un restaurante. Este componente del proyecto está orientado a garantizar la robustez, escalabilidad y seguridad del sistema, proporcionando una API eficiente y bien estructurada para soportar funcionalidades clave como la gestión del menú, el control de direcciones y la administración general. La implementación se realizó utilizando tecnologías de alto rendimiento y reconocimiento en la industria, tales como Java, Spring Boot, JPA y PostgreSQL, además de otras herramientas complementarias que se encuentran detalladas en el repositorio.',
 
+        'projects.title.item4':'El Buen Sabor Back-End',
+        'projects.description.item4':'Desarrollo Back End de una aplicación web para un restaurante. Este componente del proyecto está orientado a garantizar la robustez, escalabilidad y seguridad del sistema, proporcionando una API eficiente y bien estructurada para soportar funcionalidades clave como la gestión del menú, el control de direcciones y la administración general. La implementación se realizó utilizando tecnologías de alto rendimiento y reconocimiento en la industria, tales como Java, Spring Boot, JPA y PostgreSQL, además de otras herramientas complementarias que se encuentran detalladas en el repositorio.',
+
+        'projects.title.item5':'El Buen Sabor Back-End',
+        'projects.description.item5':'Desarrollo Back End de una aplicación web para un restaurante. Este componente del proyecto está orientado a garantizar la robustez, escalabilidad y seguridad del sistema, proporcionando una API eficiente y bien estructurada para soportar funcionalidades clave como la gestión del menú, el control de direcciones y la administración general. La implementación se realizó utilizando tecnologías de alto rendimiento y reconocimiento en la industria, tales como Java, Spring Boot, JPA y PostgreSQL, además de otras herramientas complementarias que se encuentran detalladas en el repositorio.',
+
         //Por si en algun momento creo otro
         'projects.title.itemx':'',
         'projects.description.itemx':'',
@@ -215,6 +221,12 @@ export const labels = {
 
         'projects.title.item3':'El Buen Sabor Back-End',
         'projects.description.item3':'Back End development of a web application for a restaurant. This component of the project is focused on ensuring the robustness, scalability, and security of the system, providing an efficient and well-structured API to support key functionalities such as menu management, address control, and general administration. The implementation was done using high-performance and industry-recognized technologies such as Java, Spring Boot, JPA, and PostgreSQL, along with other complementary tools detailed in the repository.',
+
+        'projects.title.item4':'El Buen Sabor Back-End',
+        'projects.description.item4':'Desarrollo Back End de una aplicación web para un restaurante. Este componente del proyecto está orientado a garantizar la robustez, escalabilidad y seguridad del sistema, proporcionando una API eficiente y bien estructurada para soportar funcionalidades clave como la gestión del menú, el control de direcciones y la administración general. La implementación se realizó utilizando tecnologías de alto rendimiento y reconocimiento en la industria, tales como Java, Spring Boot, JPA y PostgreSQL, además de otras herramientas complementarias que se encuentran detalladas en el repositorio.',
+
+        'projects.title.item5':'El Buen Sabor Back-End',
+        'projects.description.item5':'Desarrollo Back End de una aplicación web para un restaurante. Este componente del proyecto está orientado a garantizar la robustez, escalabilidad y seguridad del sistema, proporcionando una API eficiente y bien estructurada para soportar funcionalidades clave como la gestión del menú, el control de direcciones y la administración general. La implementación se realizó utilizando tecnologías de alto rendimiento y reconocimiento en la industria, tales como Java, Spring Boot, JPA y PostgreSQL, además de otras herramientas complementarias que se encuentran detalladas en el repositorio.',
 
         //In case I create another one
         'projects.title.itemx':'',
