@@ -83,6 +83,9 @@ export const labels = {
         'projects.title.item5':'El Buen Sabor Back-End',
         'projects.description.item5':'Desarrollo Back End de una aplicación web para un restaurante. Este componente del proyecto está orientado a garantizar la robustez, escalabilidad y seguridad del sistema, proporcionando una API eficiente y bien estructurada para soportar funcionalidades clave como la gestión del menú, el control de direcciones y la administración general. La implementación se realizó utilizando tecnologías de alto rendimiento y reconocimiento en la industria, tales como Java, Spring Boot, JPA y PostgreSQL, además de otras herramientas complementarias que se encuentran detalladas en el repositorio.',
 
+        'projects.title.item6':'El Buen Sabor Back-End',
+        'projects.description.item6':'Desarrollo Back End de una aplicación web para un restaurante. Este componente del proyecto está orientado a garantizar la robustez, escalabilidad y seguridad del sistema, proporcionando una API eficiente y bien estructurada para soportar funcionalidades clave como la gestión del menú, el control de direcciones y la administración general. La implementación se realizó utilizando tecnologías de alto rendimiento y reconocimiento en la industria, tales como Java, Spring Boot, JPA y PostgreSQL, además de otras herramientas complementarias que se encuentran detalladas en el repositorio.',
+
         //Por si en algun momento creo otro
         'projects.title.itemx':'',
         'projects.description.itemx':'',
@@ -227,6 +230,9 @@ export const labels = {
 
         'projects.title.item5':'El Buen Sabor Back-End',
         'projects.description.item5':'Desarrollo Back End de una aplicación web para un restaurante. Este componente del proyecto está orientado a garantizar la robustez, escalabilidad y seguridad del sistema, proporcionando una API eficiente y bien estructurada para soportar funcionalidades clave como la gestión del menú, el control de direcciones y la administración general. La implementación se realizó utilizando tecnologías de alto rendimiento y reconocimiento en la industria, tales como Java, Spring Boot, JPA y PostgreSQL, además de otras herramientas complementarias que se encuentran detalladas en el repositorio.',
+
+        'projects.title.item6':'El Buen Sabor Back-End',
+        'projects.description.item6':'Desarrollo Back End de una aplicación web para un restaurante. Este componente del proyecto está orientado a garantizar la robustez, escalabilidad y seguridad del sistema, proporcionando una API eficiente y bien estructurada para soportar funcionalidades clave como la gestión del menú, el control de direcciones y la administración general. La implementación se realizó utilizando tecnologías de alto rendimiento y reconocimiento en la industria, tales como Java, Spring Boot, JPA y PostgreSQL, además de otras herramientas complementarias que se encuentran detalladas en el repositorio.',
 
         //In case I create another one
         'projects.title.itemx':'',
