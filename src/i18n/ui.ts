@@ -83,7 +83,7 @@ export const labels = {
         'projects.title.item5':'Página Web GMGTech',
         'projects.description.item5':'Desarrollo frontend de la página oficial de GMGTech, mi empresa personal orientada a ofrecer soluciones tecnológicas en conjunto con profesionales especializados en desarrollo frontend y backend. El proyecto fue construido con Astro, TypeScript, JavaScript, CSS y Tailwind CSS, logrando una interfaz moderna, adaptable y optimizada. La web combina una estética profesional con un enfoque funcional, transmitiendo la identidad de la marca y sus servicios de forma clara y efectiva.',
 
-        'projects.title.item6':'Página Web Generica',
+        'projects.title.item6':'Página Web Genérica',
         'projects.description.item6':'Plantilla web adaptable creada con Astro, JavaScript, CSS y Tailwind CSS, diseñada para generar sitios personalizados para distintas empresas a partir de datos configurables. La estructura permite modificar fácilmente colores, contenidos y secciones mediante archivos JSON, optimizando tiempos de desarrollo. El proyecto se centra en el rendimiento, las buenas prácticas, la accesibilidad y un excelente SEO, garantizando que cada implementación mantenga una calidad profesional y un diseño coherente',
 
         //Por si en algun momento creo otro
