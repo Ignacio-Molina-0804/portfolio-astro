@@ -126,14 +126,11 @@ const PROJECTS = [
 <div class="grid w-full grid-cols-1 gap-8 sm:grid-cols-2">
   {PROJECTS.map(({ title, description, image, techIcons, repoIcons }, index) => (
     <article class="flex flex-col items-center overflow-hidden transition duration-300 bg-white shadow-lg dark:bg-gray-900 rounded-2xl hover:-translate-y-1 hover:shadow-2xl">
-      <!-- Imagen -->
       <img src={image} alt={`Proyecto ${title}`} class="object-cover w-full h-56" />
 
-      <!-- Contenido -->
       <div class="w-full p-4 text-center">
         <h3 class="text-xl font-semibold text-gray-900 dark:text-white">{title}</h3>
 
-        <!-- Botón Saber más -->
         <button
           class="px-4 py-2 mt-4 text-sm text-white transition bg-blue-600 rounded-lg hover:bg-blue-700"
           onclick={`toggleDetails(${index})`}
@@ -141,7 +138,6 @@ const PROJECTS = [
           Saber más
         </button>
 
-        <!-- Contenedor ocultable -->
         <div id={`details-${index}`} class="hidden mt-4 text-left text-gray-800 dark:text-white">
           <p class="mb-3 text-sm opacity-80">{description}</p>
 
@@ -169,9 +165,9 @@ const PROJECTS = [
 </div>
 
 <!-- SCRIPT para alternar visibilidad -->
-<script>
+<script is:inline>
   function toggleDetails(index) {
     const el = document.getElementById(`details-${index}`);
-    el.classList.toggle('hidden');
+    el?.classList.toggle('hidden');
   }
 </script>
