@@ -133,41 +133,89 @@ const PROJECTS = [
 
         <button
           class="px-4 py-2 mt-4 text-sm text-white transition bg-blue-600 rounded-lg hover:bg-blue-700"
-          onclick={`toggleDetails(${index})`}
+          onclick={`openModal(${index})`}
         >
           Saber más
         </button>
-
-        <div id={`details-${index}`} class="hidden mt-4 text-left text-gray-800 dark:text-white">
-          <p class="mb-3 text-sm opacity-80">{description}</p>
-
-          <div class="flex flex-wrap gap-2 mb-3">
-            {techIcons.map(({ icon: Icon, href }) => (
-              <SocialPill class="hover:bg-blue-500" href={href}>
-                <Icon />
-              </SocialPill>
-            ))}
-          </div>
-
-          <div class="flex flex-row gap-2">
-            {repoIcons.map(({ icon: Icon, href }) => (
-              <SocialPill class="hover:bg-blue-700" href={href}>
-                <Icon />
-              </SocialPill>
-            ))}
-          </div>
-
-          <Line />
-        </div>
       </div>
     </article>
   ))}
 </div>
 
-<!-- SCRIPT para alternar visibilidad -->
+<!-- MODALES (uno por cada proyecto) -->
+{PROJECTS.map(({ title, description, image, techIcons, repoIcons }, index) => (
+  <div
+    id={`modal-${index}`}
+    class="fixed inset-0 z-50 flex items-center justify-center hidden p-4 bg-black/40 backdrop-blur-sm"
+  >
+    <div
+      class="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto p-6 bg-white rounded-2xl shadow-xl dark:bg-gray-900 animate-fade-scale"
+    >
+      <button
+        class="absolute text-gray-600 top-3 right-3 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
+        onclick={`closeModal(${index})`}
+      >
+        ✕
+      </button>
+
+      <h3 class="mb-3 text-2xl font-semibold text-center text-gray-900 dark:text-white">
+        {title}
+      </h3>
+
+      <p class="mb-4 text-sm text-gray-800 dark:text-white opacity-80 text-pretty">{description}</p>
+
+      <div class="flex flex-wrap justify-center gap-2 mb-3">
+        {techIcons.map(({ icon: Icon, href }) => (
+          <SocialPill class="hover:bg-blue-500" href={href}>
+            <Icon />
+          </SocialPill>
+        ))}
+      </div>
+
+      <div class="flex justify-center gap-2 mb-4">
+        {repoIcons.map(({ icon: Icon, href }) => (
+          <SocialPill class="hover:bg-blue-700" href={href}>
+            <Icon />
+          </SocialPill>
+        ))}
+      </div>
+
+      <img
+        src={image}
+        alt={`Vista del proyecto ${title}`}
+        class="object-cover w-full mt-4 rounded-lg shadow-xl"
+      />
+    </div>
+  </div>
+))}
+
+<!-- SCRIPT -->
 <script is:inline>
-  function toggleDetails(index) {
-    const el = document.getElementById(`details-${index}`);
-    el?.classList.toggle('hidden');
+  function openModal(index) {
+    document.getElementById(`modal-${index}`)?.classList.remove('hidden');
+    document.body.classList.add('overflow-hidden');
   }
+
+  function closeModal(index) {
+    document.getElementById(`modal-${index}`)?.classList.add('hidden');
+    document.body.classList.remove('overflow-hidden');
+  }
+
+  // Permite cerrar haciendo clic fuera del modal
+  document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('backdrop-blur-sm')) {
+      e.target.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+  });
 </script>
+
+<style is:global>
+  @keyframes fade-scale {
+    from { opacity: 0; transform: scale(0.96) translateY(10px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+  }
+  .animate-fade-scale {
+    animation: fade-scale 0.25s ease-out;
+  }
+</style>
