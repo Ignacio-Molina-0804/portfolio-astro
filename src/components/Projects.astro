@@ -123,16 +123,18 @@ const PROJECTS = [
 ---
 
 <!-- CONTENEDOR PRINCIPAL -->
-<div class="grid w-full grid-cols-1 gap-8 sm:grid-cols-2">
+<div class="grid w-full grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-2">
   {PROJECTS.map(({ title, description, image, techIcons, repoIcons }, index) => (
     <article class="flex flex-col items-center overflow-hidden transition duration-300 bg-white shadow-lg dark:bg-gray-900 rounded-2xl hover:-translate-y-1 hover:shadow-2xl">
-      <img src={image} alt={`Proyecto ${title}`} class="object-cover w-full h-56" />
+      <img src={image} alt={`Proyecto ${title}`} class="object-cover w-full h-56 sm:h-64 md:h-72" />
 
       <div class="w-full p-4 text-center">
-        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">{title}</h3>
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-white sm:text-xl">
+          {title}
+        </h3>
 
         <button
-          class="px-4 py-2 mt-4 text-sm text-white transition bg-blue-600 rounded-lg hover:bg-blue-700"
+          class="px-4 py-2 mt-4 text-sm text-white transition bg-blue-600 rounded-lg hover:bg-blue-700 sm:text-base"
           onclick={`openModal(${index})`}
         >
           Saber más
@@ -146,27 +148,33 @@ const PROJECTS = [
 {PROJECTS.map(({ title, description, image, techIcons, repoIcons }, index) => (
   <div
     id={`modal-${index}`}
-    class="fixed inset-0 z-50 flex items-center justify-center hidden p-4 bg-black/40 backdrop-blur-sm"
+    class="fixed inset-0 z-50 flex items-center justify-center hidden p-2 sm:p-4 bg-black/40 backdrop-blur-sm"
   >
     <div
-      class="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto p-6 bg-white rounded-2xl shadow-xl dark:bg-gray-900 animate-fade-scale"
+      class="relative w-full max-w-[90%] sm:max-w-2xl max-h-[90vh] overflow-y-auto p-4 sm:p-6 bg-white rounded-2xl shadow-xl dark:bg-gray-900 animate-fade-scale"
     >
+      <!-- Botón cerrar -->
       <button
-        class="absolute text-gray-600 top-3 right-3 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
+        class="absolute text-xl text-gray-600 top-3 right-3 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
         onclick={`closeModal(${index})`}
       >
         ✕
       </button>
 
-      <h3 class="mb-3 text-2xl font-semibold text-center text-gray-900 dark:text-white">
+      <!-- Título -->
+      <h3 class="mb-3 text-xl font-semibold text-center text-gray-900 dark:text-white sm:text-2xl">
         {title}
       </h3>
 
-      <p class="mb-4 text-sm text-gray-800 dark:text-white opacity-80 text-pretty">{description}</p>
+      <!-- Descripción -->
+      <p class="mb-4 text-sm text-gray-800 dark:text-white opacity-80 sm:text-base text-pretty">
+        {description}
+      </p>
 
-      <div class="flex items-center justify-between w-full mb-4">
-        {/* Lenguajes */}
-        <div class="flex flex-wrap gap-2">
+      <!-- Íconos -->
+      <div class="flex flex-col items-center justify-between w-full gap-3 mb-4 sm:flex-row">
+        <!-- Lenguajes -->
+        <div class="flex flex-wrap justify-center gap-2 sm:justify-start">
           {techIcons.map(({ icon: Icon, href }) => (
             <SocialPill class="hover:bg-blue-500" href={href}>
               <Icon />
@@ -174,8 +182,8 @@ const PROJECTS = [
           ))}
         </div>
 
-        {/* Repositorios */}
-        <div class="flex flex-wrap justify-end gap-2">
+        <!-- Repositorios -->
+        <div class="flex flex-wrap justify-center gap-2 sm:justify-end">
           {repoIcons.map(({ icon: Icon, href }) => (
             <SocialPill class="hover:bg-blue-700" href={href}>
               <Icon />
@@ -184,6 +192,7 @@ const PROJECTS = [
         </div>
       </div>
 
+      <!-- Imagen -->
       <img
         src={image}
         alt={`Vista del proyecto ${title}`}
@@ -193,6 +202,7 @@ const PROJECTS = [
   </div>
 ))}
 
+<!-- Script externo -->
 <script src="src/scripts/saberMasButton.js" defer></script>
 
 <style is:global>
