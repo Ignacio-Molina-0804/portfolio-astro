@@ -61,9 +61,13 @@ export const labels = {
         'experience.item.title': 'Sitio Web para Empresa de Montañismo',
         'experience.item.description':'Desarrollo de una aplicación web moderna, adaptable y profesional para una empresa dedicada al montañismo y actividades de aventura. El proyecto incluye secciones informativas, galería de imágenes, agenda de salidas y un canal de contacto. Programado con Astro, JavaScript, TypeScript y Tailwind CSS.',
 
-        'experience.item.date2' : 'Próximo destino profesional',
-        'experience.item.title2': 'En búsqueda de experiencia en empresa',
-        'experience.item.description2':'¿Quieres ser el siguiente en mi lista de proyectos destacados? Estoy buscando oportunidades para aplicar mis habilidades y crecer junto a un equipo sólido.',
+        'experience.item.date2' : '',
+        'experience.item.title2': '',
+        'experience.item.description2':'',
+
+        'experience.item.dateGeneric' : 'Próximo destino profesional',
+        'experience.item.titleGeneric': 'En búsqueda de experiencia en empresa',
+        'experience.item.descriptionGeneric':'¿Quieres ser el siguiente en mi lista de proyectos destacados? Estoy buscando oportunidades para aplicar mis habilidades y crecer junto a un equipo sólido.',
 
         //Proyectos
         'projects.title': 'Proyectos',
@@ -209,9 +213,13 @@ export const labels = {
         'experience.item.title': 'Website for Mountaineering Company',
         'experience.item.description':'Development of a modern, adaptable, and professional web application for a company dedicated to mountaineering and adventure activities. The project includes informational sections, image gallery, outing schedule, and a contact channel. Programmed with Astro, JavaScript, TypeScript, and Tailwind CSS.',
 
-        'experience.item.date2' : 'Next professional destination',
-        'experience.item.title2': 'Seeking experience in a company',
-        'experience.item.description2':'Want to be the next in my list of featured projects? I am looking for opportunities to apply my skills and grow alongside a solid team.',
+        'experience.item.date2' : '',
+        'experience.item.title2': '',
+        'experience.item.description2':'',
+
+        'experience.item.dateGeneric' : 'Next professional destination',
+        'experience.item.titleGeneric': 'Seeking experience in a company',
+        'experience.item.descriptionGeneric':'Want to be the next in my list of featured projects? I am looking for opportunities to apply my skills and grow alongside a solid team.',
 
         //Projects
         'projects.title': 'Projects',

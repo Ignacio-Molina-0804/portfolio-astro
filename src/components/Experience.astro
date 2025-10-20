@@ -21,6 +21,14 @@ const EXPERIENCIE = [
     date: t("experience.item.date2"),
     title: t("experience.item.title2"),
     description: t("experience.item.description2"),
+    link: "https://diegomolina.ar",
+    // tagline: "Disponible para colaboraciones inmediatas"
+  },
+
+  {
+    date: t("experience.item.dateGeneric"),
+    title: t("experience.item.titleGeneric"),
+    description: t("experience.item.descriptionGeneric"),
     // link: "#contacto",
     // tagline: "Disponible para colaboraciones inmediatas"
   }
@@ -28,7 +36,7 @@ const EXPERIENCIE = [
 ];
 ---
 
-<ol class="relative border-s border-gray-200 dark:border-gray-700 justify-center">
+<ol class="relative justify-center border-gray-200 border-s dark:border-gray-700">
   {
     EXPERIENCIE.map((experiencie) => (
       <li class="mb-10 ms-4">
