@@ -61,9 +61,9 @@ export const labels = {
         'experience.item.title': 'Sitio Web para Empresa de Montañismo',
         'experience.item.description':'Desarrollo de una aplicación web moderna, adaptable y profesional para una empresa dedicada al montañismo y actividades de aventura. El proyecto incluye secciones informativas, galería de imágenes, agenda de salidas y un canal de contacto. Programado con Astro, JavaScript, TypeScript y Tailwind CSS.',
 
-        'experience.item.date2' : '',
-        'experience.item.title2': '',
-        'experience.item.description2':'',
+        'experience.item.date2' : 'Octubre 2025',
+        'experience.item.title2': 'Sitio Web Personal DiegoMolina.ar',
+        'experience.item.description2':'Desarrollo de un sitio web personal utilizando Astro, JavaScript, CSS y Tailwind CSS, diseñado para reflejar de manera clara y moderna la identidad profesional de Diego Molina. Incluye secciones como Inicio, Sobre mí, Oportunidad, Audios y Contacto, ofreciendo una navegación fluida y una experiencia visual equilibrada. Se implementaron funciones interactivas, animaciones y un cuestionario dinámico para enriquecer la interacción del usuario, además de integrar i18n para permitir la traducción automática del sitio al portugués.',
 
         'experience.item.dateGeneric' : 'Próximo destino profesional',
         'experience.item.titleGeneric': 'En búsqueda de experiencia en empresa',
@@ -213,9 +213,9 @@ export const labels = {
         'experience.item.title': 'Website for Mountaineering Company',
         'experience.item.description':'Development of a modern, adaptable, and professional web application for a company dedicated to mountaineering and adventure activities. The project includes informational sections, image gallery, outing schedule, and a contact channel. Programmed with Astro, JavaScript, TypeScript, and Tailwind CSS.',
 
-        'experience.item.date2' : '',
-        'experience.item.title2': '',
-        'experience.item.description2':'',
+        'experience.item.date2' : 'October 2025',
+        'experience.item.title2': 'Personal Website DiegoMolina.ar',
+        'experience.item.description2':'Development of a personal website using Astro, JavaScript, CSS, and Tailwind CSS, designed to clearly and modernly reflect Diego Molina\'s professional identity. It includes sections such as Home, About Me, Opportunity, Audios, and Contact, offering smooth navigation and a balanced visual experience. Interactive features, animations, and a dynamic questionnaire were implemented to enhance user interaction, along with i18n integration to allow automatic translation of the site into Portuguese.',
 
         'experience.item.dateGeneric' : 'Next professional destination',
         'experience.item.titleGeneric': 'Seeking experience in a company',
