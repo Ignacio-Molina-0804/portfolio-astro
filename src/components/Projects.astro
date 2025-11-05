@@ -15,122 +15,39 @@ import SpringIcon from "./icons/SpringBoot.astro";
 import PostgresIcon from "./icons/Postgres.astro";
 import CSSIcon from "./icons/CSS.astro";
 
+import projects from "../data/ProjectData.json";
 import { useTranslations } from "../i18n/util";
 import { languageList } from "../i18n/ui";
 
 const currentLang = Astro.currentLocale || "es";
 const t = useTranslations(currentLang as keyof typeof languageList);
 
-const PROJECTS = [
-  {
-    title: t('projects.title.item1'),
-    description: t('projects.description.item1'),
-    image: "/data/ProjectAconcagua.webp",
-    techIcons: [
-      { icon: AstroIcon, href: "https://astro.build", class: "hover:bg-orange-800", ariaLabel: "Sitio oficial de Astro" },
-      { icon: JavaScriptIcon, href: "https://www.javascript.com/", class: "hover:bg-yellow-600", ariaLabel: "Sitio oficial de JavaScript" },
-      { icon: TypeScriptIcon, href: "https://www.typescriptlang.org/", class: "hover:bg-blue-800", ariaLabel: "Sitio oficial de TypeScript" },
-      { icon: TailwindIcon, href: "https://tailwindcss.com/", class: "hover:bg-blue-400", ariaLabel: "Sitio oficial de Tailwind CSS" },
-    ],
-    repoIcons: [
-      { icon: GithubIcon, href: "https://github.com/Ignacio-Molina-0804/PaginaAconcagua", class: "hover:bg-blue-800", ariaLabel: "Repositorio en GitHub de Página Aconcagua" },
-      { icon: EnterIcon, href: "https://gastonmolinaguide.netlify.app", class: "hover:bg-blue-800", ariaLabel: "Sitio web de la guía Gastón Molina" },
-    ],
-    showLine: true  
-  },
-
-  {
-    title: t('projects.title.item2'),
-    description: t('projects.description.item2'),
-    image: "/data/ProjectFrontEndBuenSabor.webp",
-    techIcons: [
-      { icon: ReactIcon, href: "https://react.dev", class: "hover:bg-sky-600", ariaLabel: "Sitio oficial de React" },
-      { icon: ReduxIcon, href: "https://redux-toolkit.js.org/", class: "hover:bg-purple-800", ariaLabel: "Sitio oficial de Redux Toolkit" },
-      { icon: TypeScriptIcon, href: "https://www.typescriptlang.org/", class: "hover:bg-blue-800", ariaLabel: "Sitio oficial de TypeScript" },
-      { icon: TailwindIcon, href: "https://tailwindcss.com/", class: "hover:bg-blue-400", ariaLabel: "Sitio oficial de Tailwind CSS" },
-    ],
-    repoIcons: [
-      { icon: GithubIcon, href: "https://github.com/Ignacio-Molina-0804/ElBuenSaborFrontReact", class: "hover:bg-blue-800", ariaLabel: "Repositorio en GitHub del frontend de Buen Sabor" },
-    ],
-    showLine: true  
-  },
-
-  {
-    title: t('projects.title.item3'),
-    description: t('projects.description.item3'),
-    image: "/data/ProjectBackEndBuenSabor.webp",
-    techIcons: [
-      { icon: JavaIcon, href: "https://www.oracle.com/java/", class: "hover:bg-red-700", ariaLabel: "Sitio oficial de Java" },
-      { icon: SpringIcon, href: "https://spring.io/projects/spring-boot", class: "hover:bg-green-700", ariaLabel: "Sitio oficial de Spring Boot" },
-      { icon: PostgresIcon, href: "https://www.postgresql.org/", class: "hover:bg-blue-700", ariaLabel: "Sitio oficial de PostgreSQL" },
-    ],
-    repoIcons: [
-      { icon: GithubIcon, href: "https://github.com/Ignacio-Molina-0804/buensabor-backend", class: "hover:bg-blue-800", ariaLabel: "Repositorio en GitHub del backend de Buen Sabor" },
-    ],
-    showLine: true
-  },
-  {
-    title: t('projects.title.item4'),
-    description: t('projects.description.item4'),
-    image: "/data/ProjectDiegoMolinaAr.webp",
-    techIcons: [
-      { icon: AstroIcon, href: "https://astro.build/", class: "hover:bg-orange-800", ariaLabel: "Sitio oficial de Astro" },
-      { icon: JavaScriptIcon, href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript", class: "hover:bg-yellow-500", ariaLabel: "Documentación oficial de JavaScript" },
-      { icon: CSSIcon, href: "https://developer.mozilla.org/en-US/docs/Web/CSS", class: "hover:bg-blue-500", ariaLabel: "Documentación oficial de CSS" },
-      { icon: TailwindIcon, href: "https://tailwindcss.com/", class: "hover:bg-sky-500", ariaLabel: "Sitio oficial de Tailwind CSS" },
-    ],
-    repoIcons: [
-      { icon: GithubIcon, href: "https://github.com/Ignacio-Molina-0804/DiegoMolinaPage", class: "hover:bg-blue-800", ariaLabel: "Repositorio en GitHub de DiegoMoliaPage" },
-      { icon: EnterIcon, href: "https://diegomolina.ar", class: "hover:bg-blue-800", ariaLabel: "Sitio web de DiegoMolina" },
-
-    ],
-    showLine: true
-  },
-  {
-    title: t('projects.title.item5'),
-    description: t('projects.description.item5'),
-    image: "/data/ProjectGMGTech.webp",
-    techIcons: [
-      { icon: AstroIcon, href: "https://astro.build/", class: "hover:bg-orange-800", ariaLabel: "Sitio oficial de Astro" },
-      { icon: TypeScriptIcon, href: "https://www.typescriptlang.org/", class: "hover:bg-blue-600", ariaLabel: "Sitio oficial de TypeScript" },
-      { icon: JavaScriptIcon, href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript", class: "hover:bg-yellow-500", ariaLabel: "Documentación oficial de JavaScript" },
-      { icon: CSSIcon, href: "https://developer.mozilla.org/en-US/docs/Web/CSS", class: "hover:bg-blue-500", ariaLabel: "Documentación oficial de CSS" },
-      { icon: TailwindIcon, href: "https://tailwindcss.com/", class: "hover:bg-sky-500", ariaLabel: "Sitio oficial de Tailwind CSS" },
-    ],
-    repoIcons: [
-      { icon: GithubIcon, href: "https://github.com/Ignacio-Molina-0804/GMGTechPage", class: "hover:bg-blue-800", ariaLabel: "Repositorio en GitHub de la Página de GMGTech" },
-      { icon: EnterIcon, href: "https://gmgtech.netlify.app", class: "hover:bg-blue-800", ariaLabel: "Sitio web de GMGTech" },
-    ],
-    showLine: true
-  },
-  {
-    title: t('projects.title.item6'),
-    description: t('projects.description.item6'),
-    image: "/data/ProjectPaginaGenerica.webp",
-    techIcons: [
-      { icon: AstroIcon, href: "https://astro.build/", class: "hover:bg-orange-800", ariaLabel: "Sitio oficial de Astro" },
-      { icon: JavaScriptIcon, href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript", class: "hover:bg-yellow-500", ariaLabel: "Documentación oficial de JavaScript" },
-      { icon: CSSIcon, href: "https://developer.mozilla.org/en-US/docs/Web/CSS", class: "hover:bg-blue-500", ariaLabel: "Documentación oficial de CSS" },
-      { icon: TailwindIcon, href: "https://tailwindcss.com/", class: "hover:bg-sky-500", ariaLabel: "Sitio oficial de Tailwind CSS" },
-    ],
-    repoIcons: [
-      { icon: GithubIcon, href: "https://github.com/Ignacio-Molina-0804/GMGTechPage", class: "hover:bg-blue-800", ariaLabel: "Repositorio en GitHub de la Página Generica" },
-      { icon: EnterIcon, href: "https://ejemplo-pagina-generica.netlify.app", class: "hover:bg-blue-800", ariaLabel: "Sitio web de la Página Generica" },
-    ],
-    showLine: false
-  }
-];
+// Mapeo de nombre → componente
+const ICONS = {
+  AstroIcon,
+  JavaScriptIcon,
+  TypeScriptIcon,
+  TailwindIcon,
+  GithubIcon,
+  EnterIcon,
+  ReactIcon,
+  ReduxIcon,
+  JavaIcon,
+  SpringIcon,
+  PostgresIcon,
+  CSSIcon,
+};
 ---
 
 <!-- CONTENEDOR PRINCIPAL -->
 <div class="grid w-full grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-2">
-  {PROJECTS.map(({ title, description, image, techIcons, repoIcons }, index) => (
+  {projects.map(({ title, description, image, techIcons, repoIcons }, index) => (
     <article class="flex flex-col items-center overflow-hidden transition duration-300 bg-white shadow-lg dark:bg-gray-900 rounded-2xl hover:-translate-y-1 hover:shadow-2xl">
       <img src={image} alt={`Proyecto ${title}`} class="object-cover w-full h-56 sm:h-64 md:h-72" />
 
       <div class="w-full p-4 text-center">
         <h3 class="text-lg font-semibold text-gray-900 dark:text-white sm:text-xl">
-          {title}
+          {t(title)}
         </h3>
 
         <button
@@ -144,85 +61,66 @@ const PROJECTS = [
   ))}
 </div>
 
-<!-- MODALES (uno por cada proyecto) -->
-{PROJECTS.map(({ title, description, image, techIcons, repoIcons }, index) => (
-  <div
-    id={`modal-${index}`}
-    class="fixed inset-0 z-50 flex items-center justify-center hidden p-2 sm:p-4 bg-black/40 backdrop-blur-sm"
-  >
-    <div
-      class="relative w-full max-w-[90%] sm:max-w-2xl max-h-[90vh] overflow-y-auto p-4 sm:p-6 bg-white rounded-2xl shadow-xl dark:bg-gray-900 animate-fade-scale"
-    >
-      {/* <!-- Botón cerrar --> */}
-      <button
-        class="absolute text-xl text-gray-600 top-3 right-3 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
-        onclick={`closeModal(${index})`}
-      >
+<!-- MODALES -->
+{projects.map(({ title, description, image, techIcons, repoIcons }, index) => (
+  <div id={`modal-${index}`} class="fixed inset-0 z-50 flex items-center justify-center hidden p-2 sm:p-4 bg-black/40 backdrop-blur-sm">
+    <div class="relative w-full max-w-[90%] sm:max-w-2xl max-h-[90vh] overflow-y-auto p-4 sm:p-6 bg-white rounded-2xl shadow-xl dark:bg-gray-900 animate-fade-scale">
+      <button class="absolute text-xl text-gray-600 top-3 right-3 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white" onclick={`closeModal(${index})`}>
         ✕
       </button>
 
-      {/* <!-- Título --> */}
       <h3 class="mb-3 text-xl font-semibold text-center text-gray-900 dark:text-white sm:text-2xl">
-        {title}
+        {t(title)}
       </h3>
 
-      {/* <!-- Descripción --> */}
       <p class="mb-4 text-sm text-gray-800 dark:text-white opacity-80 sm:text-base text-pretty">
-        {description}
+        {t(description)}
       </p>
 
-      {/* <!-- Íconos --> */}
       <div class="flex flex-col items-center justify-between w-full gap-3 mb-4 sm:flex-row">
-        {/* <!-- Lenguajes --> */}
         <div class="flex flex-wrap justify-center gap-2 sm:justify-start">
-          {techIcons.map(({ icon: Icon, href }) => (
-            <SocialPill class="hover:bg-blue-500" href={href}>
-              <Icon />
-            </SocialPill>
-          ))}
+          {techIcons.map(({ icon, href }) => {
+            const IconComp = ICONS[icon];
+            return (
+              <SocialPill class="hover:bg-blue-500" href={href}>
+                <IconComp />
+              </SocialPill>
+            );
+          })}
         </div>
 
-        <!-- Repositorios -->
         <div class="flex flex-wrap justify-center gap-2 sm:justify-end">
-          {repoIcons.map(({ icon: Icon, href }) => (
-            <SocialPill class="hover:bg-blue-700" href={href}>
-              <Icon />
-            </SocialPill>
-          ))}
+          {repoIcons.map(({ icon, href }) => {
+            const IconComp = ICONS[icon];
+            return (
+              <SocialPill class="hover:bg-blue-700" href={href}>
+                <IconComp />
+              </SocialPill>
+            );
+          })}
         </div>
       </div>
 
-      {/* <!-- Imagen --> */}
-      <img
-        src={image}
-        alt={`Vista del proyecto ${title}`}
-        class="object-cover w-full mt-4 rounded-lg shadow-xl"
-      />
+      <img src={image} alt={`Vista del proyecto ${title}`} class="object-cover w-full mt-4 rounded-lg shadow-xl" />
     </div>
   </div>
 ))}
 
-<!-- Script externo -->
 <script is:inline>
-
   function openModal(index) {
     document.getElementById(`modal-${index}`)?.classList.remove("hidden");
     document.body.classList.add("overflow-hidden");
   }
-
   function closeModal(index) {
     document.getElementById(`modal-${index}`)?.classList.add("hidden");
     document.body.classList.remove("overflow-hidden");
   }
-
-  // Permite cerrar haciendo clic fuera del modal
   document.addEventListener("click", (e) => {
     if (e.target.classList.contains("backdrop-blur-sm")) {
       e.target.classList.add("hidden");
       document.body.classList.remove("overflow-hidden");
     }
   });
-
 </script>
 
 <style is:global>
@@ -230,7 +128,5 @@ const PROJECTS = [
     from { opacity: 0; transform: scale(0.96) translateY(10px); }
     to { opacity: 1; transform: scale(1) translateY(0); }
   }
-  .animate-fade-scale {
-    animation: fade-scale 0.25s ease-out;
-  }
+  .animate-fade-scale { animation: fade-scale 0.25s ease-out; }
 </style>
