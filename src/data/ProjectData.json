@@ -1,0 +1,90 @@
+[
+  {
+    "title": "projects.title.item1",
+    "description": "projects.description.item1",
+    "image": "/data/ProjectAconcagua.webp",
+    "techIcons": [
+      { "icon": "AstroIcon", "href": "https://astro.build", "class": "hover:bg-orange-800", "ariaLabel": "Sitio oficial de Astro" },
+      { "icon": "JavaScriptIcon", "href": "https://www.javascript.com/", "class": "hover:bg-yellow-600", "ariaLabel": "Sitio oficial de JavaScript" },
+      { "icon": "TypeScriptIcon", "href": "https://www.typescriptlang.org/", "class": "hover:bg-blue-800", "ariaLabel": "Sitio oficial de TypeScript" },
+      { "icon": "TailwindIcon", "href": "https://tailwindcss.com/", "class": "hover:bg-blue-400", "ariaLabel": "Sitio oficial de Tailwind CSS" }
+    ],
+    "repoIcons": [
+      { "icon": "GithubIcon", "href": "https://github.com/Ignacio-Molina-0804/PaginaAconcagua", "class": "hover:bg-blue-800", "ariaLabel": "Repositorio en GitHub de Página Aconcagua" },
+      { "icon": "EnterIcon", "href": "https://gastonmolinaguide.netlify.app", "class": "hover:bg-blue-800", "ariaLabel": "Sitio web de la guía Gastón Molina" }
+    ]
+  },
+  {
+    "title": "projects.title.item2",
+    "description": "projects.description.item2",
+    "image": "/data/ProjectFrontEndBuenSabor.webp",
+    "techIcons": [
+      { "icon": "ReactIcon", "href": "https://react.dev", "class": "hover:bg-sky-600", "ariaLabel": "Sitio oficial de React" },
+      { "icon": "ReduxIcon", "href": "https://redux-toolkit.js.org/", "class": "hover:bg-purple-800", "ariaLabel": "Sitio oficial de Redux Toolkit" },
+      { "icon": "TypeScriptIcon", "href": "https://www.typescriptlang.org/", "class": "hover:bg-blue-800", "ariaLabel": "Sitio oficial de TypeScript" },
+      { "icon": "TailwindIcon", "href": "https://tailwindcss.com/", "class": "hover:bg-blue-400", "ariaLabel": "Sitio oficial de Tailwind CSS" }
+    ],
+    "repoIcons": [
+      { "icon": "GithubIcon", "href": "https://github.com/Ignacio-Molina-0804/ElBuenSaborFrontReact", "class": "hover:bg-blue-800", "ariaLabel": "Repositorio en GitHub del frontend de Buen Sabor" }
+    ]
+  },
+  {
+    "title": "projects.title.item3",
+    "description": "projects.description.item3",
+    "image": "/data/ProjectBackEndBuenSabor.webp",
+    "techIcons": [
+      { "icon": "JavaIcon", "href": "https://www.oracle.com/java/", "class": "hover:bg-red-700", "ariaLabel": "Sitio oficial de Java" },
+      { "icon": "SpringIcon", "href": "https://spring.io/projects/spring-boot", "class": "hover:bg-green-700", "ariaLabel": "Sitio oficial de Spring Boot" },
+      { "icon": "PostgresIcon", "href": "https://www.postgresql.org/", "class": "hover:bg-blue-700", "ariaLabel": "Sitio oficial de PostgreSQL" }
+    ],
+    "repoIcons": [
+      { "icon": "GithubIcon", "href": "https://github.com/Ignacio-Molina-0804/buensabor-backend", "class": "hover:bg-blue-800", "ariaLabel": "Repositorio en GitHub del backend de Buen Sabor" }
+    ]
+  },
+  {
+    "title": "projects.title.item4",
+    "description": "projects.description.item4",
+    "image": "/data/ProjectDiegoMolinaAr.webp",
+    "techIcons": [
+      { "icon": "AstroIcon", "href": "https://astro.build/", "class": "hover:bg-orange-800", "ariaLabel": "Sitio oficial de Astro" },
+      { "icon": "JavaScriptIcon", "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript", "class": "hover:bg-yellow-500", "ariaLabel": "Documentación oficial de JavaScript" },
+      { "icon": "CSSIcon", "href": "https://developer.mozilla.org/en-US/docs/Web/CSS", "class": "hover:bg-blue-500", "ariaLabel": "Documentación oficial de CSS" },
+      { "icon": "TailwindIcon", "href": "https://tailwindcss.com/", "class": "hover:bg-sky-500", "ariaLabel": "Sitio oficial de Tailwind CSS" }
+    ],
+    "repoIcons": [
+      { "icon": "GithubIcon", "href": "https://github.com/Ignacio-Molina-0804/DiegoMolinaPage", "class": "hover:bg-blue-800", "ariaLabel": "Repositorio en GitHub de DiegoMolinaPage" },
+      { "icon": "EnterIcon", "href": "https://diegomolina.ar", "class": "hover:bg-blue-800", "ariaLabel": "Sitio web de DiegoMolina" }
+    ]
+  },
+  {
+    "title": "projects.title.item5",
+    "description": "projects.description.item5",
+    "image": "/data/ProjectGMGTech.webp",
+    "techIcons": [
+      { "icon": "AstroIcon", "href": "https://astro.build/", "class": "hover:bg-orange-800", "ariaLabel": "Sitio oficial de Astro" },
+      { "icon": "TypeScriptIcon", "href": "https://www.typescriptlang.org/", "class": "hover:bg-blue-600", "ariaLabel": "Sitio oficial de TypeScript" },
+      { "icon": "JavaScriptIcon", "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript", "class": "hover:bg-yellow-500", "ariaLabel": "Documentación oficial de JavaScript" },
+      { "icon": "CSSIcon", "href": "https://developer.mozilla.org/en-US/docs/Web/CSS", "class": "hover:bg-blue-500", "ariaLabel": "Documentación oficial de CSS" },
+      { "icon": "TailwindIcon", "href": "https://tailwindcss.com/", "class": "hover:bg-sky-500", "ariaLabel": "Sitio oficial de Tailwind CSS" }
+    ],
+    "repoIcons": [
+      { "icon": "GithubIcon", "href": "https://github.com/Ignacio-Molina-0804/GMGTechPage", "class": "hover:bg-blue-800", "ariaLabel": "Repositorio en GitHub de la Página de GMGTech" },
+      { "icon": "EnterIcon", "href": "https://gmgtech.netlify.app", "class": "hover:bg-blue-800", "ariaLabel": "Sitio web de GMGTech" }
+    ]
+  },
+  {
+    "title": "projects.title.item6",
+    "description": "projects.description.item6",
+    "image": "/data/ProjectPaginaGenerica.webp",
+    "techIcons": [
+      { "icon": "AstroIcon", "href": "https://astro.build/", "class": "hover:bg-orange-800", "ariaLabel": "Sitio oficial de Astro" },
+      { "icon": "JavaScriptIcon", "href": "https://developer.mozilla.org/en-US/docs/Web/JavaScript", "class": "hover:bg-yellow-500", "ariaLabel": "Documentación oficial de JavaScript" },
+      { "icon": "CSSIcon", "href": "https://developer.mozilla.org/en-US/docs/Web/CSS", "class": "hover:bg-blue-500", "ariaLabel": "Documentación oficial de CSS" },
+      { "icon": "TailwindIcon", "href": "https://tailwindcss.com/", "class": "hover:bg-sky-500", "ariaLabel": "Sitio oficial de Tailwind CSS" }
+    ],
+    "repoIcons": [
+      { "icon": "GithubIcon", "href": "https://github.com/Ignacio-Molina-0804/GMGTechPage", "class": "hover:bg-blue-800", "ariaLabel": "Repositorio en GitHub de la Página Genérica" },
+      { "icon": "EnterIcon", "href": "https://ejemplo-pagina-generica.netlify.app", "class": "hover:bg-blue-800", "ariaLabel": "Sitio web de la Página Genérica" }
+    ]
+  }
+]
