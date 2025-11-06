@@ -1,47 +1,25 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro";
-
+import experienceData from "../data/ExperienceData.json"; // ✅ JSON externo
 import { useTranslations } from "../i18n/util";
 import { languageList } from "../i18n/ui";
 
 const currentLang = Astro.currentLocale || "es";
 const t = useTranslations(currentLang as keyof typeof languageList);
 
-const EXPERIENCIE = [
-  {
-    date: t("experience.item.date"),
-    title: t("experience.item.title"),
-    description:
-      t("experience.item.description"),
-    link: "https://gastonmolinaguide.netlify.app",
-  },
-
-
-  {
-    date: t("experience.item.date2"),
-    title: t("experience.item.title2"),
-    description: t("experience.item.description2"),
-    link: "https://diegomolina.ar",
-    // tagline: "Disponible para colaboraciones inmediatas"
-  },
-
-  {
-    date: t("experience.item.dateGeneric"),
-    title: t("experience.item.titleGeneric"),
-    description: t("experience.item.descriptionGeneric"),
-    // link: "#contacto",
-    // tagline: "Disponible para colaboraciones inmediatas"
-  }
-
-];
+// Mapeamos el JSON aplicando t() a las claves
+const EXPERIENCIE = experienceData.map((item) => ({
+  date: t(item.date),
+  title: t(item.title),
+  description: t(item.description),
+  link: item.link,
+}));
 ---
 
 <ol class="relative justify-center border-gray-200 border-s dark:border-gray-700">
   {
     EXPERIENCIE.map((experiencie) => (
-      <li class="mb-10 ms-4">
-        <ExperienceItem {...experiencie} />
-      </li>
+      <ExperienceItem {...experiencie} />
     ))
   }
 </ol>
