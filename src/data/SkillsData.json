@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Backend Development",
+    "techIcons": [
+      { "icon": "JavaIcon", "name": "Java" },
+      { "icon": "SpringIcon", "name": "Spring Boot" },
+      { "icon": "PostgresIcon", "name": "PostgreSQL" },
+      { "icon": "MySQLIcon", "name": "MySQL" },
+      { "icon": "JPAIcon", "name": "JPA" }
+    ]
+  },
+  {
+    "title": "Frontend Development",
+    "techIcons": [
+      { "icon": "AstroIcon", "name": "Astro" },
+      { "icon": "HTMLIcon", "name": "HTML" },
+      { "icon": "CSSIcon", "name": "CSS" },
+      { "icon": "JavaScriptIcon", "name": "JavaScript" },
+      { "icon": "TypeScriptIcon", "name": "TypeScript" },
+      { "icon": "TailwindIcon", "name": "Tailwind CSS" }
+    ]
+  },
+  {
+    "title": "Herramientas",
+    "techIcons": [
+      { "icon": "VSCodeIcon", "name": "Visual Studio Code" },
+      { "icon": "BrunoIcon", "name": "Bruno" },
+      { "icon": "GitIcon", "name": "Git" },
+      { "icon": "TrelloIcon", "name": "Trello" },
+      { "icon": "JiraIcon", "name": "Jira" },
+      { "icon": "FigmaIcon", "name": "Figma" }
+    ]
+  }
+]
