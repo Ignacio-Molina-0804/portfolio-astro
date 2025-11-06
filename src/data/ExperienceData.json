@@ -1,0 +1,19 @@
+[
+  {
+    "date": "experience.item.date",
+    "title": "experience.item.title",
+    "description": "experience.item.description",
+    "link": "https://gastonmolinaguide.netlify.app"
+  },
+  {
+    "date": "experience.item.date2",
+    "title": "experience.item.title2",
+    "description": "experience.item.description2",
+    "link": "https://diegomolina.ar"
+  },
+  {
+    "date": "experience.item.dateGeneric",
+    "title": "experience.item.titleGeneric",
+    "description": "experience.item.descriptionGeneric"
+  }
+]
