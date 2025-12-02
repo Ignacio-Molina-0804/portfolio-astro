@@ -94,6 +94,8 @@ export const labels = {
         'projects.title.itemx':'',
         'projects.description.itemx':'',
 
+        "projects.previewMessage": "Saber más",
+
         //Sobre Mi
 
         'aboutme.title': 'Sobre Mí',
@@ -242,6 +244,7 @@ export const labels = {
         'projects.title.item6':'Generic Website',
         'projects.description.item6':'Adaptable web template built with Astro, JavaScript, CSS, and Tailwind CSS, designed to generate customized websites for different companies based on configurable data. The structure allows easy modification of colors, content, and sections through JSON files, optimizing development time. The project focuses on performance, best practices, accessibility, and excellent SEO, ensuring that each implementation maintains professional quality and a consistent design.',
 
+        "projects.previewMessage": "Learn more",
 
         //In case I create another one
         'projects.title.itemx':'',
