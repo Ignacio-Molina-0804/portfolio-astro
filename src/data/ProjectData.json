@@ -11,7 +11,7 @@
     ],
     "repoIcons": [
       { "icon": "GithubIcon", "href": "https://github.com/Ignacio-Molina-0804/PaginaAconcagua", "class": "hover:bg-blue-800", "ariaLabel": "Repositorio en GitHub de Página Aconcagua" },
-      { "icon": "EnterIcon", "href": "https://gastonmolinaguide.netlify.app", "class": "hover:bg-blue-800", "ariaLabel": "Sitio web de la guía Gastón Molina" }
+      { "icon": "EnterIcon", "href": "https://gmmountainguide.com", "class": "hover:bg-blue-800", "ariaLabel": "Sitio web de la guía Gastón Molina" }
     ]
   },
   {
